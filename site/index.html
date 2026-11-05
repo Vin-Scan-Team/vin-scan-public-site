@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vin-Scan — подбор деталей по фото СТС и VIN</title>
+  <title>Подбор запчастей по VIN и фото СТС для магазинов ABCP — Vin-Scan</title>
   <meta name="description"
-    content="Vin-Scan — сервис подбора деталей по фото СТС и VIN для магазинов и автосервисов на платформе ABCP. Интеграция с Telegram и MAX. Бесплатный пилот 7 дней.">
+    content="Подбор запчастей по VIN и фото СТС прямо в чате на сайте магазина на ABCP. Ответ клиенту за секунды, уведомления в Telegram и MAX. Пилот 7 дней бесплатно.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://vin-scan.ru/">
 
@@ -15,22 +15,22 @@
   <meta property="og:site_name" content="Vin-Scan">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:url" content="https://vin-scan.ru/">
-  <meta property="og:title" content="Vin-Scan: подбор запчастей по фото СТС за секунды">
+  <meta property="og:title" content="Подбор запчастей по VIN и фото СТС для магазинов ABCP — Vin-Scan">
   <meta property="og:description"
-    content="Клиент присылает фото СТС или пишет запрос своими словами. Vin-Scan определяет VIN, подбирает детали, а менеджер получает готовый ответ в чате.">
+    content="Клиент отправляет фото СТС или VIN в чат на сайте магазина, а Vin-Scan определяет авто и подбирает запчасти. Бесплатный пилот 7 дней.">
   <meta property="og:image" content="https://vin-scan.ru/img/og-cover.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Интерфейс Vin-Scan: подбор запчастей по фото СТС в мессенджере">
+  <meta property="og:image:alt" content="Чат Vin-Scan на сайте магазина: подбор запчастей по фото СТС">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Vin-Scan: подбор запчастей по фото СТС за секунды">
+  <meta name="twitter:title" content="Подбор запчастей по VIN и фото СТС для магазинов ABCP — Vin-Scan">
   <meta name="twitter:description"
-    content="Клиент присылает фото СТС или пишет запрос своими словами. Vin-Scan определяет VIN и подбирает детали.">
+    content="Чат на сайте магазина определяет авто по фото СТС или VIN и подбирает запчасти. Бесплатный пилот 7 дней.">
   <meta name="twitter:image" content="https://vin-scan.ru/img/og-cover.png">
-  <meta name="twitter:image:alt" content="Интерфейс Vin-Scan: подбор запчастей по фото СТС в мессенджере">
+  <meta name="twitter:image:alt" content="Чат Vin-Scan на сайте магазина: подбор запчастей по фото СТС">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -93,11 +93,12 @@
       "@type": "SoftwareApplication",
       "name": "Vin-Scan",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web, Telegram, MAX",
-      "description": "Сервис подбора автозапчастей по фото СТС/ПТС и VIN для магазинов и автосервисов на платформе ABCP.",
+      "operatingSystem": "Web",
+      "description": "Виджет и чат для подбора запчастей по VIN и фото СТС/ПТС на сайтах магазинов и автосервисов на платформе ABCP. Бесплатный пилот 7 дней.",
       "offers": [
         { "@type": "Offer", "name": "Старт", "price": "5000", "priceCurrency": "RUB" },
-        { "@type": "Offer", "name": "Бизнес", "price": "10000", "priceCurrency": "RUB" }
+        { "@type": "Offer", "name": "Бизнес", "price": "10000", "priceCurrency": "RUB" },
+        { "@type": "Offer", "name": "Профи", "price": "20000", "priceCurrency": "RUB" }
       ],
       "publisher": { "@id": "https://vin-scan.ru/#org" }
     }
@@ -175,7 +176,7 @@
       <div class="hero__content">
 
         <h1 class="hero__title" id="hero-title">
-          <span class="visually-hidden">Vin-Scan: подбор запчастей по фото СТС/ПТС</span>
+          <span class="visually-hidden">Подбор запчастей по VIN и фото СТС для магазинов ABCP — Vin-Scan</span>
           <img src="/img/logo_wordmark.svg" alt="" width="1015" height="171">
         </h1>
         <p class="hero__subtitle">Интеллектуальный подбор деталей по VIN и запросу клиента на вашем сайте</p>
@@ -286,7 +287,7 @@
     <!-- Инфоблок 2: как это работает -->
     <section class="section" id="how" aria-labelledby="how-title">
       <div class="section__head">
-        <span class="section__eyebrow">Как это работает</span>
+        <span class="section__eyebrow">Как работает подбор по фото СТС/ПТС</span>
         <h2 class="section__title" id="how-title">От фото СТС/ПТС до подбора детали</h2>
         <p class="section__text">Клиенту не нужно искать VIN-код и диктовать данные автомобиля. Достаточно одного фото
           или сообщения.</p>
@@ -320,8 +321,8 @@
     <section class="section" id="results" aria-labelledby="results-title">
       <div class="section__head">
         <span class="section__eyebrow">Результат</span>
-        <h2 class="section__title" id="results-title">Что меняется для магазина</h2>
-        <p class="section__text">Показатели по результатам внутреннего тестирования.</p>
+        <h2 class="section__title" id="results-title">Что даёт подбор запчастей по VIN и фото СТС интернет-магазину</h2>
+        <p class="section__text">Показатели по итогам внутреннего тестирования виджета Vin-Scan.</p>
       </div>
 
       <ul class="steps stats">
@@ -388,7 +389,7 @@
               <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
             </svg>
           </span>
-          <h3 class="audience__title">Интеграция с ABCP</h3>
+          <h3 class="audience__title">Интеграция подбора запчастей с ABCP</h3>
           <p class="audience__text">Vin-Scan работает с платформой ABCP. Цены и наличие берутся из вашего аккаунта по API, поэтому клиент получает подбор с вашим ассортиментом и индивидуальной ценой.</p>
           <ul class="chips"><li>ABCP</li><li>Цены и остатки</li><li>Подключение за 1 день</li></ul>
         </li>
