@@ -60,6 +60,7 @@
 
   <script src="/js/consent.js" defer></script>
   <script src="/js/metrika.js" defer></script>
+  <script src="/js/status.js" defer></script>
 
   <!-- Микроразметка Schema.org для организации -->
 <script type="application/ld+json">
@@ -129,11 +130,11 @@
 
     <nav class="nav" id="main-nav" aria-label="Основное меню">
       <ul class="nav__list">
-        <li class="nav__item"><a class="nav__link" href="#how">Как это работает</a></li>
-        <li class="nav__item"><a class="nav__link" href="#solutions">Решения для бизнеса</a></li>
-        <li class="nav__item"><a class="nav__link" href="#pricing">Тарифы</a></li>
-        <li class="nav__item"><a class="nav__link" href="#faq">Вопросы и ответы</a></li>
-        <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
+        <li class="nav__item"><a class="nav__link" href="/how/">Как это работает</a></li>
+        <li class="nav__item"><a class="nav__link" href="/solutions/">Решения для бизнеса</a></li>
+        <li class="nav__item"><a class="nav__link" href="/pricing/">Тарифы</a></li>
+        <li class="nav__item"><a class="nav__link" href="/faq/">Вопросы и ответы</a></li>
+        <li class="nav__item"><a class="nav__link" href="/contacts/">Контакты</a></li>
       </ul>
 
       <!-- Новый блок: телефон + мессенджеры + кнопка -->
@@ -163,7 +164,7 @@
           </div>
         </div>
 
-        <a href="#apply" class="btn btn--primary">Стань пилотом</a>
+        <a href="/#apply" class="btn btn--primary">Стань пилотом</a>
       </div>
     </nav>
 
@@ -206,8 +207,8 @@
         </div>
 
         <nav class="hero__docs" aria-label="Документы">
-          <a href="/consent">Согласие на обработку персональных данных</a>
-          <a href="/privacy">Политика конфиденциальности и обработки персональных данных</a>
+          <a href="/consent/">Согласие на обработку персональных данных</a>
+          <a href="/privacy/">Политика конфиденциальности и обработки персональных данных</a>
         </nav>
       </div>
 
@@ -317,6 +318,8 @@
           <p class="steps__text">Менеджер проверяет подбор и отправляет клиенту варианты прямо в чат.</p>
         </li>
       </ol>
+
+      <p class="section__foot">Подробнее: <a href="/how/">как это работает</a>, <a href="/photo-sts/">подбор по фото СТС и ПТС</a>, <a href="/vin/">подбор по VIN-коду</a>.</p>
     </section>
 
     <!-- НОВОЕ: выгоды в цифрах -->
@@ -397,7 +400,7 @@
         </li>
       </ul>
 
-      <p class="section__foot">Не нашли свою систему? <a href="#apply">Напишите нам</a>, обсудим подключение.</p>
+      <p class="section__foot">Не нашли свою систему? <a href="#apply">Напишите нам</a>, обсудим подключение. Подробнее об <a href="/integrations/">интеграции с ABCP</a>.</p>
     </section>
 
     <!-- Инфоблок 3: кому подходит -->
@@ -446,6 +449,8 @@
           <p class="audience__text">Ещё не работаете на платформе? Расскажите о своих планах, и мы заранее подготовим подключение Vin-Scan. Как только ваш аккаунт в ABCP будет готов, подбор по фото СТС/ПТС заработает с вашими ценами и остатками.</p>
         </li>
       </ul>
+
+      <p class="section__foot">Подробнее: <a href="/solutions/">решения для бизнеса</a>, кейс AutoShop82 и партнёры.</p>
     </section>
 
     <!-- НОВОЕ: условия пилота -->
@@ -483,6 +488,8 @@
           <a class="btn btn--light pilot__btn" href="#apply">Занять место</a>
         </li>
       </ul>
+
+      <p class="section__foot">Все этапы и показатели оценки описаны на странице <a href="/pilot/">«Условия пилота»</a>.</p>
     </section>
 
     <!-- НОВОЕ: тарифы -->
@@ -544,6 +551,8 @@
           <a class="btn btn--primary" href="#apply">Выбрать</a>
         </li>
       </ul>
+
+      <p class="section__foot">Сравнение тарифов и правила подсчёта подборов: <a href="/pricing/">страница «Тарифы»</a>.</p>
     </section>
 
 <section class="section" id="about" aria-labelledby="about-title">
@@ -699,7 +708,7 @@
         <details class="faq__item">
           <summary class="faq__q">Безопасно ли присылать фото документов?<svg class="faq__gear" aria-hidden="true" focusable="false"><use href="#faq-gear"></use></svg></summary>
           <div class="faq__panel">
-            <p class="faq__a">Да. Мы используем только данные автомобиля и храним их в России по 152-ФЗ. <br>Подробности в нашей <a href="/privacy">политике конфиденциальности</a>.</p>
+            <p class="faq__a">Да. Мы используем только данные автомобиля и храним их в России по 152-ФЗ. <br>Подробности в нашей <a href="/privacy/">политике конфиденциальности</a>.</p>
           </div>
         </details>
         <details class="faq__item">
@@ -822,7 +831,7 @@
       <input type="checkbox" id="f-consent" name="consent" required>
       <span class="consent__text">
         <label for="f-consent">Согласен на обработку персональных данных</label>
-        (<a href="/consent" target="_blank">согласие</a> и <a href="/privacy" target="_blank">политика конфиденциальности</a>).
+        (<a href="/consent/" target="_blank">согласие</a> и <a href="/privacy/" target="_blank">политика конфиденциальности</a>).
       </span>
     </div>
 
@@ -833,7 +842,7 @@
 </main>
 
   <!-- ===== Подвал (footer.css) ===== -->
-  <footer class="footer" id="contacts">
+  <footer class="footer">
     <div class="footer__inner">
 
       <div class="footer__top">
@@ -873,29 +882,29 @@
         <nav class="footer__col" aria-labelledby="f-products">
           <h3 class="footer__title" id="f-products">Продукты</h3>
           <ul class="footer__list">
-            <li><a href="#how">Подбор по фото СТС и ПТС</a></li>
-            <li><a href="#how">Подбор по VIN-коду</a></li>
-            <li><a href="#integrations">Интеграции</a></li>
-            <li><a href="#pricing">Тарифы</a></li>
+            <li><a href="/photo-sts/">Подбор по фото СТС и ПТС</a></li>
+            <li><a href="/vin/">Подбор по VIN-коду</a></li>
+            <li><a href="/integrations/">Интеграции</a></li>
+            <li><a href="/pricing/">Тарифы</a></li>
           </ul>
         </nav>
 
         <nav class="footer__col" aria-labelledby="f-clients">
           <h3 class="footer__title" id="f-clients">Клиентам</h3>
           <ul class="footer__list">
-            <li><a href="#how">Как это работает</a></li>
-            <li><a href="#solutions">Решения для бизнеса</a></li>
-            <li><a href="#pilot">Условия пилота</a></li>
-            <li><a href="#faq">Вопросы и ответы</a></li>
-            <li><a href="#apply">Подключение пилота</a></li>
+            <li><a href="/how/">Как это работает</a></li>
+            <li><a href="/solutions/">Решения для бизнеса</a></li>
+            <li><a href="/pilot/">Условия пилота</a></li>
+            <li><a href="/faq/">Вопросы и ответы</a></li>
+            <li><a href="/#apply">Подключение пилота</a></li>
           </ul>
         </nav>
 
         <nav class="footer__col" aria-labelledby="f-docs">
           <h3 class="footer__title" id="f-docs">Документы</h3>
           <ul class="footer__list">
-            <li><a href="/privacy">Политика конфиденциальности</a></li>
-            <li><a href="/consent">Согласие на обработку персональных данных</a></li>
+            <li><a href="/privacy/">Политика конфиденциальности</a></li>
+            <li><a href="/consent/">Согласие на обработку персональных данных</a></li>
           </ul>
         </nav>
 
@@ -928,33 +937,6 @@
             <span id="vs-status-text">Состояние сервиса</span>
           </a>
         </div>
-
-        <script>
-          const ctrl = new AbortController();
-          const t = setTimeout(() => ctrl.abort(), 5000);
-          fetch('https://status.vin-scan.ru/api/status-page/heartbeat/vinscan', {signal: ctrl.signal})
-            .then(res => { if (!res.ok) throw new Error(res.status); return res.json(); })
-            .then(data => {
-              clearTimeout(t);
-              const badge = document.getElementById('vinscan-status');
-              const text = document.getElementById('vs-status-text');
-
-              let isAllUp = true;
-              if (data.heartbeatList) {
-                for (const monitorId in data.heartbeatList) {
-                  const beats = data.heartbeatList[monitorId];
-                  if (beats.length > 0 && beats[beats.length - 1].status !== 1) {
-                    isAllUp = false;
-                    break;
-                  }
-                }
-              }
-
-              badge.classList.add(isAllUp ? 'vs-status-up' : 'vs-status-down');
-              text.innerText = isAllUp ? 'Все системы в норме' : 'Сбои в работе сервиса';
-            })
-            .catch(() => { /* остаётся «Состояние сервиса» */ });
-        </script>
       </div>
     </div>
   </footer>
@@ -975,7 +957,7 @@
     </svg>
     <p class="cookie-card__heading">Мы используем файлы cookie</p>
     <p class="cookie-card__text">Мы используем файлы cookie и Яндекс.Метрику для сбора статистики и улучшения
-      работы сайта. Подробнее — в <a href="/privacy">Политике конфиденциальности</a>.</p>
+      работы сайта. Подробнее — в <a href="/privacy/">Политике конфиденциальности</a>.</p>
     <button class="cookie-card__btn" type="button" data-cookie-accept>Понятно</button>
   </div>
 </body>

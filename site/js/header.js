@@ -55,7 +55,7 @@
     }
   });
 
-  nav.querySelectorAll('a[href^="#"]').forEach((link) => {
+  nav.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach((link) => {
     link.addEventListener('click', () => closeMobileNav());
   });
 
