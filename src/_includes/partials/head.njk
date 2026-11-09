@@ -1,0 +1,59 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="yandex-verification" content="bc8c3d0252ed5f66" />
+  <meta name="google-site-verification" content="0qvDzw14zDKcGst39ZxU3U1W-hV3jpWDDiU9n7YezYE" />
+  <title>{{ title }}</title>
+  <meta name="description"
+    content="{{ description }}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <!-- Open Graph: Telegram, VK, WhatsApp, Яндекс -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:title" content="{{ ogTitle or title }}">
+  <meta property="og:description"
+    content="{{ ogDescription or description }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.ogImage }}">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ ogImageAlt }}">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ ogTitle or title }}">
+  <meta name="twitter:description"
+    content="{{ twitterDescription or ogDescription or description }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.ogImage }}">
+  <meta name="twitter:image:alt" content="{{ ogImageAlt }}">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/img/logo_small.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/img/logo_small.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  {%- if preloadImage %}
+  <link rel="preload" as="image" href="{{ preloadImage }}" fetchpriority="high">
+  {%- endif %}
+  <!-- Базовые стили подключаются перед стилями страницы -->
+  {%- for css in cssFiles %}
+  <link rel="stylesheet" href="/css/{{ css }}">
+  {%- endfor %}
+
+  {%- for js in jsFiles %}
+  <script src="/js/{{ js }}.js" defer></script>
+  {%- endfor %}
+
+{%- if jsonld %}
+  <!-- Микроразметка Schema.org -->
+<script type="application/ld+json">
+{{ jsonld | safe }}
+</script>
+{%- endif %}
+
+</head>
