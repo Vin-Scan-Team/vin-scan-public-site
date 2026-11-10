@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+{% include "partials/head.njk" %}
+
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+{% include "partials/header.njk" %}
+
+{{ content | safe }}
+
+{% include "partials/footer.njk" %}
+
+{% include "partials/cookie.njk" %}
+</body>
+
+</html>

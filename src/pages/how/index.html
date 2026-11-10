@@ -1,0 +1,333 @@
+---
+layout: layouts/base.njk
+lastmod: "2026-11-10"
+title: "Как работает Vin-Scan: подбор запчастей по фото СТС и VIN"
+description: "Как Vin-Scan подбирает запчасти в чате на сайте магазина: фото СТС, VIN или текстовый запрос, распознавание и проверка менеджером. Интеграция с ABCP за 1 день."
+ogDescription: "От фото СТС или VIN-кода до списка подходящих запчастей в чате магазина. Четыре шага, проверка менеджером, интеграция с ABCP за 1 день."
+ogImageAlt: "Чат Vin-Scan на сайте магазина: подбор запчастей по фото СТС"
+cssFiles:
+  - base.css
+  - layout/header.css
+  - blocks/page.css
+  - components/chat-slider.css
+  - blocks/blocks.css
+  - blocks/inner.css
+  - layout/footer.css
+  - components/cookie.css
+jsFiles:
+  - slider
+  - header
+  - consent
+  - metrika
+  - status
+jsonld: |
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://vin-scan.ru/how/#webpage",
+        "url": "https://vin-scan.ru/how/",
+        "name": "Как работает Vin-Scan: подбор запчастей по фото СТС и VIN",
+        "description": "Как Vin-Scan подбирает запчасти в чате на сайте магазина: фото СТС, VIN или текстовый запрос, распознавание и проверка менеджером. Интеграция с ABCP за 1 день.",
+        "inLanguage": "ru",
+        "isPartOf": { "@id": "https://vin-scan.ru/#website" },
+        "breadcrumb": { "@id": "https://vin-scan.ru/how/#breadcrumb" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://vin-scan.ru/how/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://vin-scan.ru/" },
+          { "@type": "ListItem", "position": 2, "name": "Как это работает", "item": "https://vin-scan.ru/how/" }
+        ]
+      }
+    ]
+  }
+---
+  <main class="page_main container" id="main">
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol>
+        <li><a href="/">Главная</a></li>
+        <li><span aria-current="page">Как это работает</span></li>
+      </ol>
+    </nav>
+
+    <section class="section page-hero page-hero--media" aria-labelledby="page-title">
+      <div class="page-hero__content">
+        <span class="section__eyebrow">Как это работает</span>
+        <h1 class="page-hero__title" id="page-title">Как работает подбор запчастей в чате Vin-Scan</h1>
+        <p class="page-hero__lead">
+          Клиент пишет в чат на сайте магазина, а Vin-Scan за секунды определяет автомобиль и предлагает подходящие детали.
+          Менеджер проверяет выбор и оформляет заказ. Вопросы вроде «какой год?» и «пришлите VIN» берёт на себя алгоритм.
+        </p>
+        <div class="page-hero__actions">
+          <a class="btn btn--primary" href="/contacts/">Стать пилотным магазином</a>
+          <a class="btn btn--outline" href="/pricing/">Смотреть тарифы</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <div class="chat-slider" data-slider role="region" aria-roledescription="карусель"
+          aria-label="Примеры диалогов в чате Vin-Scan">
+
+          <div class="chat-slider__window">
+            <div class="chat-slider__bar" aria-hidden="true">
+              <span class="chat-slider__lights"><i></i><i></i><i></i></span>
+              <span class="chat-slider__name">Чат Vin-Scan</span>
+              <span class="chat-slider__status">онлайн</span>
+            </div>
+
+            <div class="chat-slider__track" data-slider-track tabindex="0" role="group" aria-label="Слайды">
+              <figure class="chat-slider__slide" role="group" aria-roledescription="слайд">
+                <div class="chat-slider__media">
+                  <img src="/img/chat/chat-1.jpg" fetchpriority="high" alt="Клиент отправляет в чат фото СТС/ПТС" width="568" height="835">
+                </div>
+                <figcaption class="chat-slider__caption"><b>Шаг 1.</b> Клиент отправляет фото СТС/ПТС</figcaption>
+              </figure>
+
+              <figure class="chat-slider__slide" role="group" aria-roledescription="слайд">
+                <div class="chat-slider__media">
+                  <img src="/img/chat/chat-2.jpg" alt="Vin-Scan распознаёт автомобиль и VIN" width="568" height="835"
+                    loading="lazy" decoding="async">
+                </div>
+                <figcaption class="chat-slider__caption"><b>Шаг 2.</b> Vin-Scan распознаёт автомобиль и VIN</figcaption>
+              </figure>
+
+              <figure class="chat-slider__slide" role="group" aria-roledescription="слайд">
+                <div class="chat-slider__media">
+                  <img src="/img/chat/chat-3.jpg" alt="Подбор подходящих деталей" width="568" height="835"
+                    loading="lazy" decoding="async">
+                </div>
+                <figcaption class="chat-slider__caption"><b>Шаг 3.</b> Подбор подходящих деталей</figcaption>
+              </figure>
+
+              <figure class="chat-slider__slide" role="group" aria-roledescription="слайд">
+                <div class="chat-slider__media">
+                  <img src="/img/chat/chat-4.jpg" alt="Клиент получает ответ с вариантами" width="568" height="835"
+                    loading="lazy" decoding="async">
+                </div>
+                <figcaption class="chat-slider__caption"><b>Шаг 4.</b> Клиент получает ответ с вариантами</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="chat-slider__controls">
+            <div class="chat-slider__nav">
+              <button class="chat-slider__btn" type="button" data-slider-prev aria-label="Предыдущий слайд">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <div class="chat-slider__dots" data-slider-dots></div>
+              <button class="chat-slider__btn" type="button" data-slider-next aria-label="Следующий слайд">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </button>
+            </div>
+
+            <button class="chat-slider__btn chat-slider__toggle" type="button" data-slider-toggle
+              aria-label="Остановить автопрокрутку">
+              <svg class="chat-slider__icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 6v12M15 6v12" />
+              </svg>
+              <svg class="chat-slider__icon-play" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5.5v13l10-6.5z" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="steps-title">
+      <div class="section__head">
+        <span class="section__eyebrow">Четыре шага</span>
+        <h2 class="section__title" id="steps-title">Путь клиента от первого сообщения до ответа</h2>
+        <p class="section__text">Покупателю не нужно искать VIN в документах и диктовать характеристики автомобиля. Достаточно выбрать удобный способ ввода.</p>
+      </div>
+
+      <ol class="steps">
+        <li class="steps__item">
+          <span class="steps__num" aria-hidden="true">01</span>
+          <h3 class="steps__title">Клиент выбирает способ ввода</h3>
+          <p class="steps__text">В меню чата четыре варианта: загрузить фото СТС, ввести автомобиль текстом, ввести VIN-код или указать артикул детали.</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__num" aria-hidden="true">02</span>
+          <h3 class="steps__title">Vin-Scan определяет автомобиль</h3>
+          <p class="steps__text">Из фото или VIN сервис получает марку, модель, год и VIN. Клиент подтверждает результат кнопкой «Да, верно» или нажимает «Исправить».</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__num" aria-hidden="true">03</span>
+          <h3 class="steps__title">Клиент называет деталь</h3>
+          <p class="steps__text">Достаточно написать своими словами, например «передние тормозные колодки». Позиции подбираются по VIN с учётом комплектации.</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__num" aria-hidden="true">04</span>
+          <h3 class="steps__title">Менеджер проверяет и отвечает</h3>
+          <p class="steps__text">Клиент получает варианты прямо в чате. Если нужна помощь человека, он нажимает «Позвать человека».</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="ways" aria-labelledby="ways-title">
+      <div class="section__head">
+        <span class="section__eyebrow">Способы ввода</span>
+        <h2 class="section__title" id="ways-title">Четыре способа найти деталь</h2>
+        <p class="section__text">VIN нужен не всегда. Клиент выбирает тот способ, который ему удобнее, а результат остаётся одинаково точным.</p>
+      </div>
+
+      <ul class="audience audience--two">
+        <li class="audience__card">
+          <span class="audience__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 8h3.2L9 5h6l1.8 3H20a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z" />
+              <circle cx="12" cy="13.5" r="3.5" />
+            </svg>
+          </span>
+          <h3 class="audience__title">Загрузить фото СТС или ПТС</h3>
+          <p class="audience__text">Клиент фотографирует документ и отправляет снимок в чат. Vin-Scan считывает марку, модель, год и VIN, поэтому менеджеру не нужно ничего вводить вручную.</p>
+          <ul class="chips"><li>Без ручного ввода</li><li>Фото не хранится</li></ul>
+        </li>
+        <li class="audience__card">
+          <span class="audience__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 7h16" />
+              <path d="M4 12h16" />
+              <path d="M4 17h10" />
+            </svg>
+          </span>
+          <h3 class="audience__title">Ввести VIN-код</h3>
+          <p class="audience__text">Клиент отправляет 17 символов VIN из документов или с таблички на автомобиле. Vin-Scan определяет марку, модель и комплектацию.</p>
+          <ul class="chips"><li>Точная комплектация</li><li>Минимум возвратов</li></ul>
+        </li>
+        <li class="audience__card">
+          <span class="audience__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 4.4c4.3 0 7.8 3 7.8 6.7s-3.5 6.7-7.8 6.7c-1 0-1.9-.15-2.8-.43L5 19l1.2-3.2a6.4 6.4 0 0 1-1.9-4.7c0-3.7 3.5-6.7 7.7-6.7Z" />
+            </svg>
+          </span>
+          <h3 class="audience__title">Описать авто текстом</h3>
+          <p class="audience__text">Достаточно написать «Солярис 2017, 1.6». Бот определит автомобиль по описанию и уточнит детали, если их не хватает.</p>
+          <ul class="chips"><li>Марка и модель</li><li>Год и двигатель</li></ul>
+        </li>
+        <li class="audience__card">
+          <span class="audience__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 7v14" />
+              <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+            </svg>
+          </span>
+          <h3 class="audience__title">Указать артикул</h3>
+          <p class="audience__text">Если клиент уже знает номер детали, он выбирает в меню «Я знаю артикул детали» и сразу получает предложения из вашего ассортимента.</p>
+          <ul class="chips"><li>Оригинальный номер</li><li>Аналоги</li></ul>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="section" aria-labelledby="safe-title">
+      <div class="section__head">
+        <span class="section__eyebrow">Безопасность</span>
+        <h2 class="section__title" id="safe-title">Что происходит с фото документа</h2>
+      </div>
+
+      <ul class="audience">
+        <li class="steps__item">
+          <h3 class="steps__title">Фото не хранится</h3>
+          <p class="steps__text">Изображение СТС или ПТС обрабатывается в оперативной памяти в момент распознавания и удаляется сразу после извлечения технических полей.</p>
+        </li>
+        <li class="steps__item">
+          <h3 class="steps__title">Личные данные не сохраняются</h3>
+          <p class="steps__text">Сведения о владельце, которые есть на снимке, в базу сервиса не переносятся. Сервис использует только данные автомобиля.</p>
+        </li>
+        <li class="steps__item">
+          <h3 class="steps__title">Хранение в России</h3>
+          <p class="steps__text">Данные хранятся на серверах в России в соответствии с 152-ФЗ. Подробные сроки и порядок описаны в <a href="/privacy/">политике конфиденциальности</a>.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="connect" aria-labelledby="connect-title">
+      <div class="section__head">
+        <span class="section__eyebrow">Подключение</span>
+        <h2 class="section__title" id="connect-title">Интеграция с ABCP за 1 рабочий день</h2>
+        <p class="section__text">Виджет встраивается в сайт магазина на ABCP, цены и остатки берутся из вашего аккаунта по API. Уведомления о заявках приходят на почту, в Telegram и MAX.</p>
+      </div>
+
+      <ol class="steps steps--three">
+        <li class="steps__item">
+          <span class="steps__num" aria-hidden="true">01</span>
+          <h3 class="steps__title">Доступ к API и прайс</h3>
+          <p class="steps__text">Вы даёте доступ к API аккаунта ABCP и передаёте выгрузку ассортимента в любом удобном формате.</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__num" aria-hidden="true">02</span>
+          <h3 class="steps__title">Виджет на сайте</h3>
+          <p class="steps__text">Мы помогаем подключить чат к вашему сайту и настраиваем уведомления в Telegram, MAX и на почту.</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__num" aria-hidden="true">03</span>
+          <h3 class="steps__title">Тест и обратная связь</h3>
+          <p class="steps__text">В течение пилота вы смотрите скорость ответа и число подборов и раз в неделю делитесь впечатлениями на 15 минут.</p>
+        </li>
+      </ol>
+
+      <p class="section__foot">Ещё не на ABCP или используете другую систему? Расскажите о планах, и мы заранее подготовим подключение: как только аккаунт будет готов, подбор заработает с вашими ценами и остатками.</p>
+    </section>
+
+    <section class="section" aria-labelledby="results-title">
+      <div class="section__head">
+        <span class="section__eyebrow">Результат</span>
+        <h2 class="section__title" id="results-title">Что меняется для магазина</h2>
+        <p class="section__text">Показатели по итогам внутреннего тестирования виджета Vin-Scan.</p>
+      </div>
+
+      <ul class="steps stats">
+        <li class="steps__item">
+          <span class="steps__num">до 30 с</span>
+          <p class="steps__text">на определение автомобиля и подбор детали вместо 5–15 минут</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__num">−70%</span>
+          <p class="steps__text">уточняющих вопросов клиенту</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__num">95%</span>
+          <p class="steps__text">точность распознавания данных с фото СТС и ПТС</p>
+        </li>
+        <li class="steps__item">
+          <span class="steps__num">Меньше возвратов</span>
+          <p class="steps__text">подбор учитывает комплектацию, а итог проверяет менеджер</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="more-title">
+      <div class="section__head">
+        <span class="section__eyebrow">Читайте также</span>
+        <h2 class="section__title" id="more-title">Подробнее о возможностях</h2>
+      </div>
+      <ul class="chips chips--links">
+        <li><a href="/pricing/">Тарифы и условия пилота</a></li>
+        <li><a href="/faq/">Вопросы и ответы</a></li>
+        <li><a href="/contacts/">Контакты</a></li>
+      </ul>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="cta-band__text">
+        <h2 class="cta-band__title" id="cta-title">Проверьте подбор на своём сайте</h2>
+        <p>Пилот длится 7 дней и ничего не стоит. Подключаем за 1 рабочий день.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--light" href="/contacts/">Стать пилотным магазином</a>
+        <a class="cta-band__link" href="https://t.me/VinScanRU" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a class="cta-band__link" href="https://max.ru/u/f9LHodD0cOKa-zuqYwXGyq91kErDhUCwsnc6W33V5822dwCx7ND5D0halkg" target="_blank" rel="noopener noreferrer">MAX</a>
+      </div>
+    </section>
+
+  </main>

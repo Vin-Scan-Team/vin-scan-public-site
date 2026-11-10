@@ -1,0 +1,289 @@
+/* ==========================================================================
+  @@1  ШАПКА  (бывш. header.css)
+  ========================================================================== */
+
+/* ===== Шапка ===== */
+.header {
+  --header-radius: var(--radius-lg);
+
+  position: sticky;
+  top: 0;                 /* прилипает вплотную к верху экрана */
+  z-index: 100;
+  width: calc(100% - var(--gutter) * 2);
+  max-width: var(--container);
+  margin: var(--gutter) auto 2rem;
+  background: var(--surface);
+  border-radius: var(--header-radius);
+  box-shadow: var(--shadow);
+  transition: border-radius 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Состояние при прокрутке: прямые верхние углы и заметная тень */
+.header.is-stuck {
+  border-radius: 0 0 var(--header-radius) var(--header-radius);
+  box-shadow: var(--shadow-header);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  min-height: 96px;
+  padding: 1.25rem 2.5rem;
+}
+
+.header__logo { --logo-size: 48px; position: relative; display: block; flex-shrink: 0; margin-left: 0.75rem; }
+.header__logo-static { display: block; height: var(--logo-size); width: auto; }
+.header__logo-gear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--logo-size) * (244 / 252));
+  height: var(--logo-size);
+  transform-origin: 49.59% 50%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header__logo:hover .header__logo-gear,
+.header__logo:focus-visible .header__logo-gear { transform: rotate(90deg); }
+
+/* ===== Навигация ===== */
+.nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.nav__item { position: relative; }
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+  font: inherit;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  color: var(--text);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.nav__link:hover,
+.nav__link:focus-visible {
+  color: var(--primary-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* ===== Кнопки шапки ===== */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* ===== Бургер ===== */
+.header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  padding: 0 10px;
+  background: none;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.header__burger span {
+  display: block;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.header__burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header__burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.header__burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ===== Телефон + мессенджеры ===== */
+.phone {
+  position: relative;
+}
+
+.phone__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.phone__link:hover,
+.phone__link:focus-visible { color: var(--primary); text-decoration: none; }
+
+.phone__icon {
+  width: 18px;
+  height: 18px;
+  fill: var(--primary);
+  flex-shrink: 0;
+}
+
+/* Всплывающее окошко */
+.phone__popup {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  min-width: 190px;
+  padding: 0.5rem;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, 6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 110;
+}
+
+/* Невидимый мостик, чтобы окошко не закрывалось, пока курсор идёт от номера к нему */
+.phone__popup::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.phone:hover .phone__popup,
+.phone:focus-within .phone__popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+.phone__messenger {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.phone__messenger:hover,
+.phone__messenger:focus-visible {
+  text-decoration: none;
+}
+/* Пункты по умолчанию нейтральные на белом фоне попапа, бренд-цвет появляется при наведении */
+.phone__messenger--tg:hover,
+.phone__messenger--tg:focus-visible { color: var(--text-inverse); background: #229ed9; }
+.phone__messenger--max:hover,
+.phone__messenger--max:focus-visible { color: var(--text-inverse); background: var(--messenger-max); }
+
+.phone__messenger-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.phone__messenger-icon--tg { fill: #229ed9; }
+.phone__messenger--tg:hover .phone__messenger-icon--tg,
+.phone__messenger--tg:focus-visible .phone__messenger-icon--tg { fill: #fff; }
+.phone__messenger--max:hover .phone__messenger-icon--max,
+.phone__messenger--max:focus-visible .phone__messenger-icon--max { filter: brightness(0) invert(1); }
+
+/* Узкие десктопы: чтобы всё помещалось в одну строку */
+@media (max-width: 1360px) {
+  .header__inner { gap: 1.5rem; }
+  .nav { gap: 1.25rem; }
+  .nav__list { gap: 1.25rem; }
+}
+
+/* Бургер-меню и устройства без наведения: мессенджеры показываем сразу */
+@media (max-width: 1180px) {
+  .phone__link { padding: 0.875rem 0; }
+
+  .phone__popup {
+    position: static;
+    min-width: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    background: none;
+  }
+  .phone:hover .phone__popup,
+  .phone:focus-within .phone__popup { transform: none; }
+  .phone__popup::before { display: none; }
+
+  .phone__messenger {
+    flex: 1;
+    justify-content: center;
+    border: 1px solid var(--border);
+  }
+}
+
+/* ===== Адаптив ===== */
+@media (max-width: 1180px) {
+  .header__inner { gap: 1.5rem; padding: 1rem 1.5rem; min-height: 80px; position: relative; }
+  .header__burger { display: flex; }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem 1.5rem 1.5rem;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+  .nav.is-open { display: flex; }
+
+  .nav__list { flex-direction: column; align-items: stretch; gap: 0; margin: 0; }
+  .nav__item { border-bottom: 1px solid var(--border); }
+  .nav__link { width: 100%; justify-content: space-between; padding: 0.875rem 0; }
+
+  .header__actions { flex-direction: column; align-items: stretch; }
+  .header__actions .btn { width: 100%; }
+}
+
+@media (max-width: 640px) {
+  .header { margin-bottom: 1.25rem; }
+  .header__inner { gap: 0.75rem; padding: 0.75rem 1rem; min-height: 64px; }
+  .header__logo { --logo-size: 32px; }
+  .header__burger { width: 40px; height: 40px; margin-left: auto; padding: 0 9px; }
+}
+
+@media (max-width: 480px) {
+  .header__inner { gap: 0.5rem; padding: 0.75rem; }
+  .header__logo { --logo-size: 28px; }
+}
