@@ -94,12 +94,18 @@
   border-radius: var(--radius-md);
   text-decoration: none;
 }
+.faq-aside__messengers { display: grid; gap: 0.5rem; }
 .faq-aside__link {
+  display: block;
+  padding: 0.5rem 0.75rem;
   text-align: center;
   font-weight: 600;
   color: var(--primary);
+  border-radius: var(--radius-sm);
   text-decoration: none;
 }
+
+.faq-aside__link:hover { background: var(--bg); text-decoration: none; }
 .faq-aside__btn:hover {
   color: var(--text-inverse);
   background: var(--primary-hover);

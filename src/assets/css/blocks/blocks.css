@@ -28,6 +28,7 @@
 
 /* ===== Пилот ===== */
 .steps__item--accent { display: flex; flex-direction: column; color: var(--text-inverse); background: var(--primary-gradient); }
+.steps__item--accent .steps__title { color: var(--text-inverse); }
 .steps__item--accent .steps__text { flex: 1; margin-bottom: 1rem; color: var(--text-on-dark-muted); }
 .pilot__btn { align-self: flex-start; }
 

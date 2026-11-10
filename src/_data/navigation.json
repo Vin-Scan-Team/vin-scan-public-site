@@ -1,6 +1,5 @@
 [
   { "url": "/how/", "label": "Как это работает" },
-  { "url": "/solutions/", "label": "Решения для бизнеса" },
   { "url": "/pricing/", "label": "Тарифы" },
   { "url": "/faq/", "label": "Вопросы и ответы" },
   { "url": "/contacts/", "label": "Контакты" }

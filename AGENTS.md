@@ -12,19 +12,20 @@
 
 | Технология | Назначение |
 |---|---|
+| **Eleventy** (v3.x) + Nunjucks | Генерация страниц и layouts в `_site/` |
 | **HTML5** (plain, валидируется `html-validate`) | Разметка всех страниц |
 | **CSS3** (модульные файлы, CSS-переменные, media queries) | Стилизация (чистый CSS, без препроцессоров) |
 | **JavaScript** (Vanilla JS, ES2021+, IIFE-модули) | Клиентская интерактивность (без фреймворков) |
 | **Yandex Object Storage** (S3-совместимое хранилище) | Хостинг статики |
-| **GitHub Actions** | CI/CD: валидация HTML + деплой |
+| **GitHub Actions** | CI/CD: сборка, валидация HTML + деплой |
 | **html-validate** (v11.16.2) | Линтер HTML (строгие правила) |
-| **eclint** | Автоформатирование по `.editorconfig` |
+| **Node.js** (22) + npm | Сборка и проверка сайта |
 | **EditorConfig** | Настройки форматирования кода |
 | **Schema.org / JSON-LD** | Микроразметка для поисковиков |
 | **Open Graph / Twitter Cards** | Разметка для соцсетей |
 | **Яндекс.Метрика** | Веб-аналитика (счётчик с согласием на cookie) |
 
-**Важно:** Node.js не используется в рантайме — проект является чистой статикой (нет бэкенда, нет `package.json`, нет сборщиков вроде Webpack/Vite). Однако Node.js применяется для **тулинга**: линтер `html-validate` и форматировщик `eclint` запускаются через `npx` как локально, так и в GitHub Actions.
+**Важно:** сайт собирается локально и в GitHub Actions через Eleventy; Node.js не используется в рантайме. Публикуемый каталог `_site/` генерируется командой `npm run build` и не коммитится.
 
 ---
 
@@ -44,70 +45,18 @@ vin-scan-public-site/
 │   ├── deploy.yml                     # Валидация HTML + деплой в Yandex Object Storage
 │   └── auto-format.yml                # Автоформатирование через eclint
 │
-├── demo/                              # Прототипы (не деплоятся)
-│   ├── section.html                   # HTML-заготовка демо-блока с видео (ждёт ролик)
-│   └── demo.css                       # Стили для демо-блока
-│
-├── site/                              # ★ КОРЕНЬ САЙТА (деплоится в бакет)
-│   ├── index.html                     # Главная страница (лендинг)
-│   ├── how/index.html                 # Как это работает
-│   ├── photo-sts/index.html           # Подбор по фото СТС и ПТС
-│   ├── vin/index.html                 # Подбор по VIN-коду
-│   ├── integrations/index.html        # Интеграции (ABCP)
-│   ├── solutions/index.html           # Решения для бизнеса
-│   ├── pricing/index.html             # Тарифы
-│   ├── pilot/index.html               # Условия пилота
-│   ├── faq/index.html                 # Вопросы и ответы (FAQPage)
-│   ├── contacts/index.html            # Контакты и форма заявки
-│   ├── sitemap.xml / robots.txt       # Карта сайта и правила для поисковиков
-│   ├── consent/index.html             # Согласие на обработку ПД
-│   ├── privacy/index.html             # Политика конфиденциальности
-│   │
-│   ├── css/
-│   │   ├── base.css                   # Токены палитры, сброс, типографика, кнопки, контейнер
-│   │   ├── layout/
-│   │   │   ├── header.css             # Шапка (sticky, бургер, телефон+мессенджеры)
-│   │   │   └── footer.css             # Подвал (сетка колонок, партнёры, статус сервиса)
-│   │   ├── blocks/
-│   │   │   ├── page.css               # Hero, шаги, аудитория, адаптив
-│   │   │   ├── blocks.css             # Цифры, интеграции, пилот, тарифы, о нас, партнёры
-│   │   │   ├── faq.css                # FAQ-аккордеон
-│   │   │   ├── inner.css              # Внутренние страницы: крошки, первый экран, текст, таблица, плашка-призыв
-│   │   │   └── apply.css              # Блок заявки с формой
-│   │   ├── components/
-│   │   │   ├── chat-slider.css        # Слайдер скриншотов чата
-│   │   │   └── cookie.css             # Cookie-плашка
-│   │   └── legal/
-│   │       └── legal.css              # Стили юридических страниц
-│   │
-│   ├── js/
-│   │   ├── header.js                  # Sticky-шапка, бургер-меню, скролл
-│   │   ├── slider.js                  # Карусель скриншотов (scroll-snap, автопрокрутка)
-│   │   ├── faq.js                     # Аккордеон FAQ (анимация Web Animations API)
-│   │   ├── form.js                    # Форма заявки (валидация, POST/mailto, метрика)
-│   │   ├── metrika.js                 # Яндекс.Метрика (отложенная загрузка)
-│   │   ├── consent.js                 # Управление cookie-плашкой
-│   │   ├── status.js                  # Бейдж «Состояние сервиса» в подвале
-│   │   └── partners-marquee.js        # Бегущая лента партнёров
-│   │
-│   └── img/
-│       ├── logo_header.svg            # Логотип для шапки (основа без шестерни)
-│       ├── logo_gear.svg              # Шестерня для анимации логотипа
-│       ├── logo_full.svg              # Полный логотип (векторный оригинал)
-│       ├── logo_wordmark.svg          # Текстовая часть логотипа
-│       ├── logo_medium.svg            # Средний логотип
-│       ├── logo_small.svg / .png      # Маленький логотип (favicon/PWA)
-│       ├── logo-max.svg               # Логотип мессенджера MAX
-│       ├── og-cover.png               # Open Graph-изображение 1200×630
-│       ├── favicon.svg                # Векторная иконка сайта
-│       ├── chat/
-│       │   ├── chat-1.jpg ... chat-4.jpg  # Скриншоты чата для слайдера
-│       ├── partners/
-│       │   ├── autoshop82.webp ... pit-stop.webp  # Логотипы партнёров
-│       └── review/
-│           └── remzi.png              # Аватар отзыва
-│
-└── state/                             # Пусто (зарезервировано)
+├── package.json                       # Команды сборки и проверки
+├── eleventy.config.js                 # Конфигурация Eleventy
+├── src/
+│   ├── pages/                         # Nunjucks/HTML-страницы и Markdown-блог
+│   ├── _includes/
+│   │   ├── layouts/                   # Общие layouts сайта, legal и поста
+│   │   └── partials/                  # Head, header, footer, cookie
+│   ├── _data/                         # Общие данные сайта и навигации
+│   └── assets/                        # CSS, JS, изображения, sitemap и PWA
+├── _site/                             # Результат сборки (генерируется)
+├── demo/                              # Прототипы, не деплоятся
+└── state/                             # Зарезервировано, не использовать
 ```
 
 ---
@@ -116,30 +65,19 @@ vin-scan-public-site/
 
 ### Локальный просмотр
 
-Запускать сервер **только из папки `site/`**, иначе абсолютные пути `/css/...` не найдутся:
-
 ```sh
-cd site
-python3 -m http.server 8000
-# или
-npx --yes serve .
+npm run serve
 ```
 
-### Валидация HTML
+### Сборка и валидация
 
 ```sh
-npx --yes html-validate@11.16.2 "site/**/*.html"
+npm ci
+npm run build
+npm run validate
 ```
 
-### Форматирование (EditorConfig)
-
-```sh
-npx eclint fix "**/*"
-```
-
-### Деплой
-
-Автоматический при push в `main` (GitHub Actions). Не требует ручных команд.
+Деплой выполняется автоматически только при push в `main` (GitHub Actions).
 
 ---
 

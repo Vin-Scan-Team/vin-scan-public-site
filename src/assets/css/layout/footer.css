@@ -113,11 +113,16 @@
   border-radius: var(--radius-sm);
   transition: background 0.2s ease, transform 0.2s ease;
 }
-.footer__social-link svg { width: 22px; height: 22px; fill: currentColor; }
+.footer__social-link svg,
+.footer__social-link .footer__messenger-icon { width: 24px; height: 24px; fill: currentColor; }
+.footer .footer__social-link--tg { background: #242424; }
+.footer .footer__social-link--tg:hover,
+.footer .footer__social-link--tg:focus-visible { background: #229ed9; }
+.footer .footer__social-link--max { background: #242424; }
+.footer .footer__social-link--max:hover,
+.footer .footer__social-link--max:focus-visible { background: var(--messenger-max); }
 .footer .footer__social-link:hover { color: var(--text-inverse); transform: translateY(-2px); }
 .footer__social-link--vk:hover  { background: #0077ff; }
-.footer__social-link--tg:hover  { background: #229ed9; }
-.footer__social-link--max:hover { background: linear-gradient(135deg, #3c8cff, #8c3cff); }
 
 @media (prefers-reduced-motion: reduce) {
   .footer__logo-gear,

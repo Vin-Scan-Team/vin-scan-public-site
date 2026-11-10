@@ -22,6 +22,8 @@
   --bg: #eaf1f6;
   --surface: #fff;
   --text: #0d1016;
+  --heading: #263b50;
+  --messenger-max: #4b1bfa;
   --text-muted: #5b6670;
   --text-placeholder: #6b7a89;
   --text-inverse: #fff;
@@ -92,6 +94,10 @@ html { background-color: var(--bg); scroll-padding-top: 7.5rem; scroll-behavior:
 @media (max-width: 640px) {
   html { scroll-padding-top: 5rem; }
 }
+
+h1,
+h2,
+h3 { color: var(--heading); }
 
 img { max-width: 100%; display: block; }
 

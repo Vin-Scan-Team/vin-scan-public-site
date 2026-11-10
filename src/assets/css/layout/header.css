@@ -78,7 +78,12 @@
   cursor: pointer;
   white-space: nowrap;
 }
-.nav__link:hover { color: var(--primary); text-decoration: none; }
+.nav__link:hover,
+.nav__link:focus-visible {
+  color: var(--primary-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
 
 /* ===== Кнопки шапки ===== */
 .header__actions {
@@ -187,19 +192,24 @@
 }
 .phone__messenger:hover,
 .phone__messenger:focus-visible {
-  background: var(--primary);
-  color: #fff;
   text-decoration: none;
 }
+/* Пункты по умолчанию нейтральные на белом фоне попапа, бренд-цвет появляется при наведении */
+.phone__messenger--tg:hover,
+.phone__messenger--tg:focus-visible { color: var(--text-inverse); background: #229ed9; }
+.phone__messenger--max:hover,
+.phone__messenger--max:focus-visible { color: var(--text-inverse); background: var(--messenger-max); }
 
 .phone__messenger-icon {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
 }
-.phone__messenger-icon--tg { fill: #229ED9; }
-.phone__messenger:hover .phone__messenger-icon--tg,
-.phone__messenger:focus-visible .phone__messenger-icon--tg { fill: #fff; }
+.phone__messenger-icon--tg { fill: #229ed9; }
+.phone__messenger--tg:hover .phone__messenger-icon--tg,
+.phone__messenger--tg:focus-visible .phone__messenger-icon--tg { fill: #fff; }
+.phone__messenger--max:hover .phone__messenger-icon--max,
+.phone__messenger--max:focus-visible .phone__messenger-icon--max { filter: brightness(0) invert(1); }
 
 /* Узкие десктопы: чтобы всё помещалось в одну строку */
 @media (max-width: 1360px) {

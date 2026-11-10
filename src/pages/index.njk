@@ -1,5 +1,6 @@
 ---
 layout: layouts/base.njk
+lastmod: "2026-11-10"
 title: "Подбор запчастей по VIN и фото СТС для магазинов ABCP — Vin-Scan"
 description: "Подбор запчастей по VIN и фото СТС прямо в чате на сайте магазина на ABCP. Ответ клиенту за секунды, уведомления в Telegram и MAX. Пилот 7 дней бесплатно."
 ogTitle: "Подбор запчастей по VIN и фото СТС для магазинов ABCP — Vin-Scan"
@@ -20,7 +21,6 @@ cssFiles:
 jsFiles:
   - slider
   - header
-  - form
   - partners-marquee
   - faq
   - consent
@@ -101,8 +101,9 @@ jsonld: |
         </div>
 
         <div class="hero__actions">
-          <a href="#apply" class="btn btn--primary">Стать пилотным магазином</a>
+          <a href="/contacts/" class="btn btn--primary">Стать пилотным магазином</a>
           <a href="https://t.me/VinScanRU" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+          <a href="https://max.ru/u/f9LHodD0cOKa-zuqYwXGyq91kErDhUCwsnc6W33V5822dwCx7ND5D0halkg" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Написать в MAX</a>
         </div>
 
         <nav class="hero__docs" aria-label="Документы">
@@ -218,7 +219,7 @@ jsonld: |
         </li>
       </ol>
 
-      <p class="section__foot">Подробнее: <a href="/how/">как это работает</a>, <a href="/photo-sts/">подбор по фото СТС и ПТС</a>, <a href="/vin/">подбор по VIN-коду</a>.</p>
+      <p class="section__foot">Подробнее: <a href="/how/">как это работает</a> и какие данные можно отправлять в чат.</p>
     </section>
 
     <!-- НОВОЕ: выгоды в цифрах -->
@@ -299,7 +300,7 @@ jsonld: |
         </li>
       </ul>
 
-      <p class="section__foot">Не нашли свою систему? <a href="#apply">Напишите нам</a>, обсудим подключение. Подробнее об <a href="/integrations/">интеграции с ABCP</a>.</p>
+      <p class="section__foot">Не нашли свою систему? <a href="/contacts/">Напишите нам</a>, обсудим подключение. Подробнее об <a href="/how/#connect">интеграции с ABCP</a>.</p>
     </section>
 
     <!-- Инфоблок 3: кому подходит -->
@@ -349,7 +350,6 @@ jsonld: |
         </li>
       </ul>
 
-      <p class="section__foot">Подробнее: <a href="/solutions/">решения для бизнеса</a>, кейс AutoShop82 и партнёры.</p>
     </section>
 
     <!-- НОВОЕ: условия пилота -->
@@ -384,11 +384,11 @@ jsonld: |
         <li class="steps__item steps__item--accent">
           <h3 class="steps__title">Мест в пилоте</h3>
           <p class="steps__text">Берём не более 3 новых магазинов в неделю для сохранения качества онбординга</p>
-          <a class="btn btn--light pilot__btn" href="#apply">Занять место</a>
+          <a class="btn btn--light pilot__btn" href="/contacts/">Занять место</a>
         </li>
       </ul>
 
-      <p class="section__foot">Все этапы и показатели оценки описаны на странице <a href="/pilot/">«Условия пилота»</a>.</p>
+      <p class="section__foot">Этапы и условия пилота описаны на <a href="/pricing/#pilot">странице тарифов</a>.</p>
     </section>
 
     <!-- НОВОЕ: тарифы -->
@@ -416,7 +416,7 @@ jsonld: |
             <li>Панель администратора</li>
             <li>Статистика использования виджета</li>
           </ul>
-          <a class="btn btn--outline" href="#apply">Выбрать</a>
+          <a class="btn btn--outline" href="/contacts/">Выбрать</a>
         </li>
         <li class="plan plan--featured">
           <span class="plan__badge">Популярный</span>
@@ -431,7 +431,7 @@ jsonld: |
             <li>Панель администратора</li>
             <li>Статистика использования виджета</li>
           </ul>
-          <a class="btn btn--primary" href="#apply">Выбрать</a>
+          <a class="btn btn--primary" href="/contacts/">Выбрать</a>
         </li>
         <li class="plan plan--featured">
           <span class="plan__badge">Максимум</span>
@@ -447,7 +447,7 @@ jsonld: |
             <li>Расширенная статистика и аналитика по запросам</li>
             <li>Приоритетная поддержка</li>
           </ul>
-          <a class="btn btn--primary" href="#apply">Выбрать</a>
+          <a class="btn btn--primary" href="/contacts/">Выбрать</a>
         </li>
       </ul>
 
@@ -562,6 +562,7 @@ jsonld: |
             <path fill="none" stroke="currentColor" stroke-width="9.98328" d="M111.025 62.0446C99.3821 64.8067 88.7061 70.676 80.1353 79.0269C71.5646 87.3778 65.4202 97.8971 62.3566 109.465M145.967 63.2925C151.255 65.1439 156.287 67.6599 160.942 70.78M183.404 95.7382C186.728 101.17 189.25 107.055 190.891 113.209M190.891 140.663C188.332 152.536 182.553 163.474 174.188 172.278C165.823 181.083 155.196 187.415 143.471 190.579M106.033 190.579C100.745 188.727 95.7128 186.212 91.0585 183.092M69.844 163.125C65.8482 156.998 62.8963 150.252 61.1086 143.159" />
           </symbol>
         </svg>
+
         <details class="faq__item">
           <summary class="faq__q">Что если фото СТС/ПТС нечёткое или сделано под углом?<svg class="faq__gear" aria-hidden="true" focusable="false"><use href="#faq-gear"></use></svg></summary>
           <div class="faq__panel">
@@ -592,6 +593,7 @@ jsonld: |
             <p class="faq__a">Да. При интеграции с вашим аккаунтом ABCP клиент видит актуальные данные по наличию и ценам от ваших поставщиков с вашей информацией по ценам деталей.</p>
           </div>
         </details>
+
         <details class="faq__item">
           <summary class="faq__q">Приходят ли уведомления в мессенджер?<svg class="faq__gear" aria-hidden="true" focusable="false"><use href="#faq-gear"></use></svg></summary>
           <div class="faq__panel">
@@ -610,6 +612,7 @@ jsonld: |
             <p class="faq__a">Да. Мы используем только данные автомобиля и храним их в России по 152-ФЗ. <br>Подробности в нашей <a href="/privacy/">политике конфиденциальности</a>.</p>
           </div>
         </details>
+
         <details class="faq__item">
           <summary class="faq__q">Что будет после пилота?<svg class="faq__gear" aria-hidden="true" focusable="false"><use href="#faq-gear"></use></svg></summary>
           <div class="faq__panel">
@@ -640,102 +643,29 @@ jsonld: |
         <li>После пилота никаких обязательств</li>
       </ul>
 
-      <a class="faq-aside__btn" href="#apply">Запустить пилот</a>
-      <a class="faq-aside__link" href="https://t.me/VinScanRU" rel="noopener">Написать в Telegram</a>
+      <a class="faq-aside__btn" href="/contacts/">Запустить пилот</a>
+      <div class="faq-aside__messengers" aria-label="Связаться в мессенджере">
+        <a class="faq-aside__link" href="https://t.me/VinScanRU" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+        <a class="faq-aside__link faq-aside__link--max" href="https://max.ru/u/f9LHodD0cOKa-zuqYwXGyq91kErDhUCwsnc6W33V5822dwCx7ND5D0halkg" target="_blank" rel="noopener noreferrer">Написать в MAX</a>
+      </div>
     </aside>
   </div>
-</section>
 
-<!-- Инфоблок 4: заявка (вместо кнопки «Написать на почту») -->
-<section class="apply" id="apply" aria-labelledby="apply-title">
+</section>
+<section class="apply apply--cta" id="apply" aria-labelledby="apply-title">
   <div class="apply__content">
     <h2 class="apply__title" id="apply-title">Станьте пилотным магазином</h2>
     <p class="apply__text">На этапе закрытого тестирования мы подключаем ограниченное число магазинов. Оставьте заявку, ответим в течение одного рабочего дня.</p>
     <div class="apply__alt">
-      <a class="btn btn--light" href="https://t.me/VinScanRU" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+      <a class="btn btn--light" href="/contacts/">Оставить заявку</a>
+      <div class="apply__messenger-links" aria-label="Связаться в мессенджере">
+        <a class="apply__messenger-link" href="https://t.me/VinScanRU" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a class="apply__messenger-link" href="https://max.ru/u/f9LHodD0cOKa-zuqYwXGyq91kErDhUCwsnc6W33V5822dwCx7ND5D0halkg" target="_blank" rel="noopener noreferrer">MAX</a>
+      </div>
       <a class="apply__mail" href="mailto:contact@vin-scan.ru">contact@vin-scan.ru</a>
     </div>
 
 
   </div>
-
-  <form class="form" id="pilot-form" novalidate data-endpoint="" data-mailto="contact@vin-scan.ru">
-    <div class="form__row">
-      <div class="field">
-        <label for="f-name">Имя</label>
-        <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Как к вам обращаться" required>
-      </div>
-      <div class="field">
-        <label for="f-shop">Магазин или сервис</label>
-        <input id="f-shop" name="shop" type="text" autocomplete="organization" placeholder="Название, как его знают клиенты" required>
-      </div>
-    </div>
-
-    <div class="form__row">
-      <div class="field">
-        <label for="f-city">Город</label>
-        <input id="f-city" name="city" type="text" autocomplete="address-level2" placeholder="Где работает ваш магазин или сервис" required>
-      </div>
-      <div class="field">
-        <label for="f-contact">Телефон или Telegram</label>
-        <input id="f-contact" name="contact" type="text" autocomplete="tel" placeholder="+7 900 000-00-00 или @username" required>
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="f-volume">Запросов на подбор в день</label>
-      <select id="f-volume" name="volume" required>
-        <option value="" selected disabled>Выберите примерное количество</option>
-        <option>До 20</option>
-        <option>20–100</option>
-        <option>Более 100</option>
-      </select>
-    </div>
-
-    <fieldset class="field field--group">
-      <legend>Где общаетесь с клиентами <span class="field__hint">можно выбрать несколько</span></legend>
-
-      <div class="choices">
-        <label class="choice">
-          <input type="checkbox" name="channel" value="Телефон">
-          <span>Телефон</span>
-        </label>
-        <label class="choice">
-          <input type="checkbox" name="channel" value="Telegram">
-          <span>Telegram</span>
-        </label>
-        <label class="choice">
-          <input type="checkbox" name="channel" value="MAX">
-          <span>MAX</span>
-        </label>
-        <label class="choice">
-          <input type="checkbox" name="channel" value="Сайт">
-          <span>Сайт</span>
-        </label>
-        <label class="choice">
-          <input type="checkbox" name="channel" value="Другое" id="channel-other"
-                aria-controls="channel-other-wrap" aria-expanded="false">
-          <span>Другое</span>
-        </label>
-      </div>
-
-      <div id="channel-other-wrap" class="other-wrap" hidden>
-        <label for="channel-other-text" class="visually-hidden">Укажите, где ещё вы общаетесь с клиентами</label>
-        <input type="text" id="channel-other-text" name="channel_other"
-              maxlength="150" placeholder="Например: онлайн чат на сайте" autocomplete="off">
-      </div>
-    </fieldset>
-
-    <div class="consent">
-      <input type="checkbox" id="f-consent" name="consent" required>
-      <span class="consent__text">
-        <label for="f-consent">Согласен на обработку персональных данных</label>
-        (<a href="/consent/" target="_blank">согласие</a> и <a href="/privacy/" target="_blank">политика конфиденциальности</a>).
-      </span>
-    </div>
-
-    <button class="btn btn--primary" type="submit">Отправить заявку</button>
-    <p class="form__status" role="status" aria-live="polite"></p>
-  </form>
 </section>
 </main>
