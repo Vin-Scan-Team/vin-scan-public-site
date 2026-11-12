@@ -42,8 +42,7 @@ vin-scan-public-site/
 ├── .gitattributes / .gitignore        # Git-настройки
 │
 ├── .github/workflows/
-│   ├── deploy.yml                     # Валидация HTML + деплой в Yandex Object Storage
-│   └── auto-format.yml                # Автоформатирование через eclint
+│   └── deploy.yml                     # Проверка EditorConfig, валидация HTML и деплой в Yandex Object Storage
 │
 ├── package.json                       # Команды сборки и проверки
 ├── eleventy.config.js                 # Конфигурация Eleventy
@@ -208,7 +207,7 @@ flowchart TD
 
 - **Сообщения коммитов** писать на русском языке в повелительном / инфинитивном наклонении (например: «Добавить секцию тарифов», «Исправить отступ в подвале», «Обновить контакты в шапке»).
 - **Не коммитить** служебные файлы ОС (`.DS_Store`, `Thumbs.db`) и не трогать ветки кроме целевой.
-- **Форматирование** выполняется автоматически через GitHub Actions (`auto-format.yml`), которое создаёт дополнительный коммит `style: auto-format via \`.editorconfig\``. Не нужно форматировать код вручную.
+- **Форматирование** проверяется через GitHub Actions (`deploy.yml`) с помощью `editorconfig-checker` до сборки и деплоя. На `push` workflow сначала выполняет `editorconfig-checker --fix` и создаёт коммит `style: apply EditorConfig fixes`, а в Pull Request только проверяет правила и завершается с ошибкой при нарушениях.
 
 ### Ограничения и осторожность
 
