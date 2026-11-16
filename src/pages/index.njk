@@ -66,7 +66,16 @@ jsonld: |
           { "@type": "Offer", "name": "Бизнес", "price": "10000", "priceCurrency": "RUB" },
           { "@type": "Offer", "name": "Профи", "price": "15000", "priceCurrency": "RUB" }
         ],
+        "subjectOf": { "@id": "https://vin-scan.ru/offer/#webpage" },
         "publisher": { "@id": "https://vin-scan.ru/#org" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://vin-scan.ru/offer/#webpage",
+        "url": "https://vin-scan.ru/offer/",
+        "name": "Публичная оферта Vin-Scan",
+        "inLanguage": "ru",
+        "isPartOf": { "@id": "https://vin-scan.ru/#website" }
       }
     ]
   }
@@ -96,12 +105,12 @@ jsonld: |
         </ul>
 
         <div class="hero__contact">
-          <p>По вопросам сотрудничества и подключения пилотных магазинов:</p>
+          <p>По вопросам сотрудничества и подключения магазинов:</p>
           <p><strong>E-mail:</strong> <a href="mailto:contact@vin-scan.ru">contact@vin-scan.ru</a></p>
         </div>
 
         <div class="hero__actions">
-          <a href="/contacts/" class="btn btn--primary">Стать пилотным магазином</a>
+          <a href="/contacts/" class="btn btn--primary">Попробовать бесплатно</a>
           <a href="https://t.me/VinScanRU" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
           <a href="https://max.ru/u/f9LHodD0cOKa-zuqYwXGyq91kErDhUCwsnc6W33V5822dwCx7ND5D0halkg" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Написать в MAX</a>
         </div>
@@ -352,11 +361,11 @@ jsonld: |
 
     </section>
 
-    <!-- НОВОЕ: условия пилота -->
-    <section class="section" id="pilot" aria-labelledby="pilot-title">
+    <!-- НОВОЕ: условия пробного периода -->
+    <section class="section" id="trial" aria-labelledby="trial-title">
       <div class="section__head">
-        <span class="section__eyebrow">Пилот</span>
-        <h2 class="section__title" id="pilot-title">Как проходит пилот</h2>
+        <span class="section__eyebrow">Пробный период</span>
+        <h2 class="section__title" id="trial-title">Как проходит пробный период</h2>
         <p class="section__text">Бесплатное подключение и пробный период. Вместе смотрим результаты и решаем, продолжать ли.</p>
       </div>
 
@@ -378,17 +387,17 @@ jsonld: |
           <p class="steps__text">На время пробного периода бесплатно. Если до его окончания вы не откажетесь, подключается выбранный тариф.</p>
         </li>
         <li class="steps__item">
-          <h3 class="steps__title">Что после пилота</h3>
+          <h3 class="steps__title">Что после пробного периода</h3>
           <p class="steps__text">Смотрим результаты: скорость ответа, число подборов, конверсию. Подходит — остаётесь на выбранном тарифе. Нет — сообщите нам до конца пробного периода, мы отключимся и удалим данные.</p>
         </li>
         <li class="steps__item steps__item--accent">
-          <h3 class="steps__title">Мест в пилоте</h3>
-          <p class="steps__text">Берём не более 3 новых магазинов в неделю для сохранения качества онбординга</p>
-          <a class="btn btn--light pilot__btn" href="/contacts/">Занять место</a>
+          <h3 class="steps__title">Попробуйте бесплатно</h3>
+          <p class="steps__text">Оставьте заявку, и мы ответим в течение одного рабочего дня.</p>
+          <a class="btn btn--light trial__btn" href="/contacts/">Оставить заявку</a>
         </li>
       </ul>
 
-      <p class="section__foot">Этапы и условия пилота описаны на <a href="/pricing/#pilot">странице тарифов</a>.</p>
+      <p class="section__foot">Этапы и условия пробного периода описаны на <a href="/pricing/#trial">странице тарифов</a>.</p>
     </section>
 
     <!-- НОВОЕ: тарифы -->
@@ -477,7 +486,7 @@ jsonld: |
     </div>
 
     <article class="case">
-      <span class="case__label">Кейс пилота</span>
+      <span class="case__label">Кейс клиента</span>
       <h3 class="case__title">AutoShop82, Симферополь</h3>
       <p><strong>Задача:</strong> 100 запросов в день в Telegram и MAX, менеджеры тратили до 15 минут на каждый подбор.</p>
       <p><strong>Что сделали:</strong> подключили Vin-Scan к Telegram и загрузили прайс.</p>
@@ -614,7 +623,7 @@ jsonld: |
         </details>
 
         <details class="faq__item">
-          <summary class="faq__q">Что будет после пилота?<svg class="faq__gear" aria-hidden="true" focusable="false"><use href="#faq-gear"></use></svg></summary>
+          <summary class="faq__q">Что будет после пробного периода?<svg class="faq__gear" aria-hidden="true" focusable="false"><use href="#faq-gear"></use></svg></summary>
           <div class="faq__panel">
             <p class="faq__a">Пробный период длится 14 дней. Если вы не откажетесь до его окончания, подключится выбранный тариф. От сервиса можно отказаться письменным уведомлением, в том числе по email: оплата действует до конца текущего расчётного периода.</p>
           </div>
@@ -635,7 +644,7 @@ jsonld: |
 
     <aside class="faq-aside" aria-label="Связаться с нами">
       <h3 class="faq-aside__title">Не нашли ответ?</h3>
-      <p class="faq-aside__text">Напишите нам, и мы ответим в течение рабочего дня. Или сразу запустите бесплатный пилот.</p>
+      <p class="faq-aside__text">Напишите нам, и мы ответим в течение рабочего дня. Или сразу подключите бесплатный пробный период.</p>
 
       <ul class="faq-aside__facts">
         <li>Подключение за 1 рабочий день</li>
@@ -643,7 +652,7 @@ jsonld: |
         <li>Пробный период 14 дней бесплатно</li>
       </ul>
 
-      <a class="faq-aside__btn" href="/contacts/">Запустить пилот</a>
+      <a class="faq-aside__btn" href="/contacts/">Попробовать бесплатно</a>
       <div class="faq-aside__messengers" aria-label="Связаться в мессенджере">
         <a class="faq-aside__link" href="https://t.me/VinScanRU" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
         <a class="faq-aside__link faq-aside__link--max" href="https://max.ru/u/f9LHodD0cOKa-zuqYwXGyq91kErDhUCwsnc6W33V5822dwCx7ND5D0halkg" target="_blank" rel="noopener noreferrer">Написать в MAX</a>
@@ -654,8 +663,8 @@ jsonld: |
 </section>
 <section class="apply apply--cta" id="apply" aria-labelledby="apply-title">
   <div class="apply__content">
-    <h2 class="apply__title" id="apply-title">Станьте пилотным магазином</h2>
-    <p class="apply__text">На этапе закрытого тестирования мы подключаем ограниченное число магазинов. Оставьте заявку, ответим в течение одного рабочего дня.</p>
+    <h2 class="apply__title" id="apply-title">Подключите Vin-Scan к своему магазину</h2>
+    <p class="apply__text">Первые 14 дней бесплатно. Оставьте заявку, ответим в течение одного рабочего дня.</p>
     <div class="apply__alt">
       <a class="btn btn--light" href="/contacts/">Оставить заявку</a>
       <div class="apply__messenger-links" aria-label="Связаться в мессенджере">

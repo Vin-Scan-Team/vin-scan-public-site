@@ -1,9 +1,9 @@
 ---
 layout: layouts/base.njk
-lastmod: "2026-11-10"
+lastmod: "2026-11-17"
 title: "Контакты Vin-Scan: телефон, e-mail, Telegram, MAX, адрес"
-description: "Свяжитесь с Vin-Scan: телефон +7 (979) 005-35-59, e-mail contact@vin-scan.ru, Telegram и MAX. Реквизиты ИП Пугин Е.А., Санкт-Петербург. Заявка на пилот."
-ogDescription: "Как связаться с командой Vin-Scan по вопросам подключения пилота и сотрудничества: телефон, почта, Telegram, MAX, форма заявки."
+description: "Свяжитесь с Vin-Scan: телефон +7 (979) 005-35-59, e-mail contact@vin-scan.ru, Telegram и MAX. Реквизиты ИП Пугин Е.А., Санкт-Петербург. Заявка на подключение."
+ogDescription: "Как связаться с командой Vin-Scan по вопросам подключения и сотрудничества: телефон, почта, Telegram, MAX, форма заявки."
 ogImageAlt: "Чат Vin-Scan на сайте магазина: подбор запчастей по фото СТС"
 cssFiles:
   - base.css
@@ -29,7 +29,7 @@ jsonld: |
         "@id": "https://vin-scan.ru/contacts/#webpage",
         "url": "https://vin-scan.ru/contacts/",
         "name": "Контакты Vin-Scan: телефон, e-mail, Telegram, MAX, адрес",
-        "description": "Свяжитесь с Vin-Scan: телефон +7 (979) 005-35-59, e-mail contact@vin-scan.ru, Telegram и MAX. Реквизиты ИП Пугин Е.А., Санкт-Петербург. Заявка на пилот.",
+        "description": "Свяжитесь с Vin-Scan: телефон +7 (979) 005-35-59, e-mail contact@vin-scan.ru, Telegram и MAX. Реквизиты ИП Пугин Е.А., Санкт-Петербург. Заявка на подключение.",
         "inLanguage": "ru",
         "isPartOf": { "@id": "https://vin-scan.ru/#website" },
         "breadcrumb": { "@id": "https://vin-scan.ru/contacts/#breadcrumb" }
@@ -101,7 +101,7 @@ jsonld: |
         </li>
         <li class="audience__card">
           <h3 class="audience__title">E-mail</h3>
-          <p class="audience__text">По вопросам сотрудничества и подключения пилотных магазинов.</p>
+          <p class="audience__text">По вопросам сотрудничества и подключения магазинов.</p>
           <p><a class="btn btn--outline" href="mailto:contact@vin-scan.ru">contact@vin-scan.ru</a></p>
         </li>
       </ul>
@@ -126,7 +126,7 @@ jsonld: |
             и <a href="/consent/">согласие на обработку персональных данных</a>.
           </p>
           <p>
-            Перед обращением вы можете посмотреть, <a href="/pilot/">как проходит пилот</a>, и ознакомиться с <a href="/faq/">ответами на частые вопросы</a>.
+            Перед обращением вы можете посмотреть, <a href="/pricing/#trial">как проходит пробный период</a>, прочитать <a href="/offer/">публичную оферту</a> и ознакомиться с <a href="/faq/">ответами на частые вопросы</a>.
           </p>
         </div>
       </div>
@@ -134,8 +134,8 @@ jsonld: |
 
 <section class="apply" id="apply" aria-labelledby="apply-title">
   <div class="apply__content">
-    <h2 class="apply__title" id="apply-title">Станьте пилотным магазином</h2>
-    <p class="apply__text">На этапе закрытого тестирования мы подключаем ограниченное число магазинов. Оставьте заявку, ответим в течение одного рабочего дня.</p>
+    <h2 class="apply__title" id="apply-title">Подключите Vin-Scan к своему магазину</h2>
+    <p class="apply__text">Первые 14 дней бесплатно. Оставьте заявку, ответим в течение одного рабочего дня.</p>
     <div class="apply__alt">
       <a class="btn btn--light" href="https://t.me/VinScanRU" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
       <a class="btn btn--light" href="https://max.ru/u/f9LHodD0cOKa-zuqYwXGyq91kErDhUCwsnc6W33V5822dwCx7ND5D0halkg" target="_blank" rel="noopener noreferrer">Написать в MAX</a>
@@ -145,7 +145,7 @@ jsonld: |
 
   </div>
 
-  <form class="form" id="pilot-form" novalidate data-endpoint="" data-mailto="contact@vin-scan.ru">
+  <form class="form" id="apply-form" novalidate data-endpoint="" data-mailto="contact@vin-scan.ru">
     <div class="form__row">
       <div class="field">
         <label for="f-name">Имя</label>
@@ -220,6 +220,14 @@ jsonld: |
       </span>
     </div>
 
+    <div class="consent">
+      <input type="checkbox" id="f-offer" name="offer" required>
+      <span class="consent__text">
+        <label for="f-offer">Принимаю условия</label>
+        <a href="/offer/" target="_blank">публичной оферты</a>.
+      </span>
+    </div>
+
     <button class="btn btn--primary" type="submit">Отправить заявку</button>
     <p class="form__status" role="status" aria-live="polite"></p>
   </form>
@@ -232,7 +240,7 @@ jsonld: |
       </div>
       <ul class="chips chips--links">
         <li><a href="/how/">Как это работает</a></li>
-        <li><a href="/pricing/">Тарифы и пилот</a></li>
+        <li><a href="/pricing/">Тарифы и пробный период</a></li>
         <li><a href="/faq/">Вопросы и ответы</a></li>
       </ul>
     </section>

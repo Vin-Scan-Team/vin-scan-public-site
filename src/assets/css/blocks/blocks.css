@@ -3,9 +3,9 @@
   Должен идти после @@2: переиспользует и дополняет его классы
   ========================================================================== */
 
-/* ===== Новые блоки: цифры, интеграции, пилот, тарифы, о нас, FAQ, заявка ===== */
+/* ===== Новые блоки: цифры, интеграции, пробный период, тарифы, о нас, FAQ, заявка ===== */
 /* Подключается после page_main.css, использует переменные из base.css.
-  Интеграции, безопасность и пилот переиспользуют .audience, .steps и .section из page_main.css */
+  Интеграции, безопасность и пробный период переиспользуют .audience, .steps и .section из page_main.css */
 
 .section__foot { margin-top: 2rem; color: var(--text-muted); }
 
@@ -26,11 +26,11 @@
   transition: color 0.25s ease, background-color 0.25s ease;
 }
 
-/* ===== Пилот ===== */
+/* ===== Пробный период ===== */
 .steps__item--accent { display: flex; flex-direction: column; color: var(--text-inverse); background: var(--primary-gradient); }
 .steps__item--accent .steps__title { color: var(--text-inverse); }
 .steps__item--accent .steps__text { flex: 1; margin-bottom: 1rem; color: var(--text-on-dark-muted); }
-.pilot__btn { align-self: flex-start; }
+.trial__btn { align-self: flex-start; }
 
 /* ===== Тарифы ===== */
 .notice {

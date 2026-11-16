@@ -1,8 +1,8 @@
-// Форма заявки пилота.
+// Форма заявки на подключение.
 // Если в data-endpoint указан URL, заявка уходит POST-запросом (JSON).
 // Если пусто, открывается письмо на data-mailto с заполненными полями (работает без бэкенда).
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('pilot-form');
+  const form = document.getElementById('apply-form');
   if (!form) return;
 
   const status = form.querySelector('.form__status');
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!form.checkValidity()) {
       form.reportValidity();
-      say('Заполните обязательные поля и подтвердите согласие.', false);
+      say('Заполните обязательные поля и подтвердите согласие и условия оферты.', false);
       return;
     }
 
@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .map((c) => (c === otherCheck ? 'Другое: ' + otherInput.value.trim() : c.value));
     delete data.channel_other; // текст уже внутри data.channel
     delete data.consent;
+    delete data.offer;
     btn.disabled = true;
 
     try {
@@ -104,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
           .map((k) => LABELS[k] + ': ' + (Array.isArray(data[k]) ? data[k].join(', ') : (data[k] || '')))
           .join('\n');
         window.location.href = 'mailto:' + form.dataset.mailto +
-          '?subject=' + encodeURIComponent('Заявка на пилот Vin-Scan') +
+          '?subject=' + encodeURIComponent('Заявка на подключение Vin-Scan') +
           '&body=' + encodeURIComponent(body);
         say('Открыли письмо с вашими данными. Если почта не открылась, напишите на ' + form.dataset.mailto + '.', true);
       }
