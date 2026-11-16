@@ -2,6 +2,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/css": "css" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/img": "img" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/docs": "docs" });
   eleventyConfig.addPassthroughCopy({ "src/assets/robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.svg": "favicon.svg" });
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });

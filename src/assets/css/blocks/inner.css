@@ -74,6 +74,8 @@
 .compare th, .compare td { padding: 0.875rem 1.25rem; text-align: left; border-bottom: 1px solid var(--border); }
 .compare thead th { font-weight: 700; background: var(--bg); }
 .compare tbody th { font-weight: 600; }
+.compare-wrap + .compare-wrap,
+.compare-wrap + .split { margin-top: 2rem; }
 .compare tbody tr:last-child > * { border-bottom: 0; }
 
 /* ===== Плашка-призыв в конце страницы ===== */

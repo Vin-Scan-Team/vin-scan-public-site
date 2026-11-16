@@ -90,3 +90,7 @@
     transition: none;
   }
 }
+
+@media print {
+  .cookie-card { display: none; }
+}
