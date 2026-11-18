@@ -333,6 +333,10 @@ footer {
   .back-link,
   .doc-actions { display: none; }
 
+  p,
+  li,
+  dd { orphans: 3; widows: 3; }
+
   h2,
   h3 { break-after: avoid; }
 

@@ -84,9 +84,11 @@
 .about { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem; align-items: start; }
 .about__story { margin-bottom: 1.5rem; color: var(--text); }
 .subtitle { margin: 2rem 0 1rem; font-size: 1.125rem; font-weight: 700; }
-/* ===== С нами тестируют: на всю ширину ===== */
+/* ===== С нами работают: на всю ширину, два ряда ===== */
 .partners-block { margin-top: 3rem; }
 .partners-block .subtitle { margin-top: 0; }
+.partners-block .partners + .partners { margin-top: 1rem; }
+.partners-block__more { margin-top: 1rem; text-align: center; }
 
 .partners {
   list-style: none;
@@ -128,6 +130,7 @@
   object-fit: contain; /* любой логотип вписывается целиком, без обрезки и искажений */
 }
 .partner__city { font-size: 0.8125rem; color: var(--text-muted); }
+.partner .client-logo-fallback { font-size: 1.125rem; }
 
 /* ===== Бегущая лента партнёров (десктоп) ===== */
 .partners.is-marquee {
@@ -145,6 +148,7 @@
 .partners.is-marquee.is-dragging { cursor: grabbing; }
 .partners.is-marquee li { flex: 0 0 240px; }
 .partners.is-marquee .partner { user-select: none; -webkit-user-drag: none; }
+.partners.is-marquee + .partners.is-marquee { margin-top: 0; }
 
 
 .case {

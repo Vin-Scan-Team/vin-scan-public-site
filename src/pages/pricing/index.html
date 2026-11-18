@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-lastmod: "2026-11-17"
+lastmod: "2026-11-18"
 title: "Тарифы Vin-Scan: от 5 000 ₽ в месяц за подбор запчастей"
 description: "Тарифы Vin-Scan: Старт 5 000 ₽, Бизнес 10 000 ₽, Профи 15 000 ₽ в месяц. Цена зависит от лимитов подборов по VIN и фото СТС и заявок. Пробный период 14 дней бесплатно."
 ogDescription: "Три тарифа Vin-Scan для магазинов и автосервисов на ABCP: до 100, 250 или 450 подборов по VIN и фото СТС и до 60, 140 или 250 заявок в месяц. Пробный период 14 дней бесплатно."
@@ -71,8 +71,8 @@ jsonld: |
         <span class="section__eyebrow">Тарифы</span>
         <h1 class="page-hero__title" id="page-title">Тарифы на подбор запчастей по VIN и фото СТС</h1>
         <p class="page-hero__lead">
-          Стоимость Vin-Scan зависит от лимитов подборов по VIN и фото СТС/ПТС и заявок в месяц, а не от числа пользователей или менеджеров.
-          Все возможности подбора доступны на каждом тарифе. Различаются лимиты и уровень поддержки.
+          Цена зависит от того, сколько заявок и подборов по VIN и фото СТС/ПТС вы получаете в месяц, а не от числа менеджеров.
+          Все возможности есть на каждом тарифе. Различаются лимиты и поддержка.
         </p>
         <div class="page-hero__actions">
           <a class="btn btn--primary" href="/contacts/">Попробовать бесплатно</a>
@@ -81,70 +81,15 @@ jsonld: |
       </div>
     </section>
 
-    <section class="section" aria-labelledby="plans-title">
+    <section class="section" id="plans" aria-labelledby="plans-title">
       <div class="section__head">
         <span class="section__eyebrow">Три тарифа</span>
-        <h2 class="section__title" id="plans-title">Выберите тариф по числу подборов и заявок</h2>
+        <h2 class="section__title" id="plans-title">Выберите тариф</h2>
+        <p class="section__text">Заявка — покупатель выбрал предложение с ценой. Подбор — Vin-Scan определил автомобиль по VIN или фото СТС/ПТС. Подбор по марке и модели без лимита на всех тарифах.</p>
       </div>
 
       <div class="notice">
-        <span>Пробный период — 14 дней или до 50 подборов и 30 заявок бесплатно, что наступит раньше. При превышении лимитов сервис не отключается, а доплата считается <a href="#overage">по ставкам тарифа</a>.</span>
-      </div>
-
-      <ul class="audience">
-        <li class="plan">
-          <span class="plan__badge">Начальный</span>
-          <h3 class="plan__name">Старт</h3>
-          <p class="plan__limit">до 100 подборов по VIN и фото СТС/ПТС</p>
-          <p class="plan__limit">до 60 заявок в месяц</p>
-          <p class="plan__price">5 000 <small>₽/мес</small></p>
-          <ul class="plan__list">
-            <li>Безлимитный подбор по марке и модели</li>
-            <li>Уведомления на email, в Telegram и MAX</li>
-            <li>Интеграция с вашим каталогом и остатками</li>
-            <li>Панель администратора</li>
-            <li>Статистика использования виджета</li>
-          </ul>
-          <a class="btn btn--outline" href="/#apply">Выбрать</a>
-        </li>
-        <li class="plan plan--featured">
-          <span class="plan__badge">Популярный</span>
-          <h3 class="plan__name">Бизнес</h3>
-          <p class="plan__limit">до 250 подборов по VIN и фото СТС/ПТС</p>
-          <p class="plan__limit">до 140 заявок в месяц</p>
-          <p class="plan__price">10 000 <small>₽/мес</small></p>
-          <ul class="plan__list">
-            <li>Безлимитный подбор по марке и модели</li>
-            <li>Уведомления на email, в Telegram и MAX</li>
-            <li>Интеграция с вашим каталогом и остатками</li>
-            <li>Панель администратора</li>
-            <li>Статистика использования виджета</li>
-          </ul>
-          <a class="btn btn--primary" href="/#apply">Выбрать</a>
-        </li>
-        <li class="plan plan--featured">
-          <span class="plan__badge">Максимум</span>
-          <h3 class="plan__name">Профи</h3>
-          <p class="plan__limit">до 450 подборов по VIN и фото СТС/ПТС</p>
-          <p class="plan__limit">до 250 заявок в месяц</p>
-          <p class="plan__price">15 000 <small>₽/мес</small></p>
-          <ul class="plan__list">
-            <li>Безлимитный подбор по марке и модели</li>
-            <li>Уведомления на email, в Telegram и MAX</li>
-            <li>Интеграция с вашим каталогом и остатками</li>
-            <li>Панель администратора</li>
-            <li>Статистика использования виджета</li>
-            <li>Приоритетная поддержка</li>
-          </ul>
-          <a class="btn btn--primary" href="/#apply">Выбрать</a>
-        </li>
-      </ul>
-    </section>
-
-    <section class="section" aria-labelledby="compare-title">
-      <div class="section__head">
-        <span class="section__eyebrow">Сравнение</span>
-        <h2 class="section__title" id="compare-title">Чем отличаются тарифы Старт, Бизнес и Профи</h2>
+        <span>Пробный период — 14 дней или до 30 заявок и 50 подборов бесплатно, что наступит раньше. Если лимит закончился, сервис не отключается: сверх лимита вы платите <a href="#overage">по ставкам тарифа</a>.</span>
       </div>
 
       <div class="compare-wrap">
@@ -152,7 +97,7 @@ jsonld: |
           <caption class="visually-hidden">Сравнение тарифов Vin-Scan</caption>
           <thead>
             <tr>
-              <th scope="col">Возможность</th>
+              <th scope="col">Что входит</th>
               <th scope="col">Старт</th>
               <th scope="col">Бизнес</th>
               <th scope="col">Профи</th>
@@ -166,52 +111,58 @@ jsonld: |
               <td>15 000 ₽</td>
             </tr>
             <tr>
-              <th scope="row">Заявки в месяц</th>
+              <th scope="row">Заявок в месяц</th>
               <td>до 60</td>
               <td>до 140</td>
               <td>до 250</td>
             </tr>
             <tr>
-              <th scope="row">Подборы по VIN-коду и фото СТС/ПТС</th>
+              <th scope="row">Подборов по VIN и фото СТС/ПТС в месяц</th>
               <td>до 100</td>
               <td>до 250</td>
               <td>до 450</td>
             </tr>
             <tr>
-              <th scope="row">Безлимитный подбор по марке и модели автомобиля</th>
-              <td>Да</td>
-              <td>Да</td>
-              <td>Да</td>
+              <th scope="row">Подбор по марке и модели без лимита</th>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
             </tr>
             <tr>
-              <th scope="row">Уведомления (email, Telegram, MAX)</th>
-              <td>Да</td>
-              <td>Да</td>
-              <td>Да</td>
+              <th scope="row">Уведомления на email, в Telegram и MAX</th>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
             </tr>
             <tr>
-              <th scope="row">Интеграция с каталогом и остатками</th>
-              <td>Да</td>
-              <td>Да</td>
-              <td>Да</td>
+              <th scope="row">Каталог, цены и остатки из вашего ABCP</th>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
             </tr>
             <tr>
               <th scope="row">Панель администратора</th>
-              <td>Да</td>
-              <td>Да</td>
-              <td>Да</td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
             </tr>
             <tr>
               <th scope="row">Статистика использования виджета</th>
-              <td>Да</td>
-              <td>Да</td>
-              <td>Да</td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
             </tr>
             <tr>
               <th scope="row">Приоритетная поддержка</th>
-              <td>Нет</td>
-              <td>Нет</td>
-              <td>Да</td>
+              <td><span class="table__no" role="img" aria-label="Нет">—</span></td>
+              <td><span class="table__no" role="img" aria-label="Нет">—</span></td>
+              <td><span class="table__yes" role="img" aria-label="Да">✔</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="visually-hidden">Выбрать тариф</span></th>
+              <td><a class="btn btn--outline" href="/#apply">Выбрать</a></td>
+              <td><a class="btn btn--primary" href="/#apply">Выбрать</a></td>
+              <td><a class="btn btn--primary" href="/#apply">Выбрать</a></td>
             </tr>
           </tbody>
         </table>
@@ -360,11 +311,11 @@ jsonld: |
       <ul class="audience">
         <li class="steps__item">
           <h3 class="steps__title">Что вы получаете</h3>
-          <p class="steps__text">Бесплатный доступ к Vin-Scan на 14 дней (или до 50 подборов и 30 заявок), подключение к вашему сайту, загрузку прайса и персонального менеджера на время теста.</p>
+          <p class="steps__text">Бесплатный доступ к Vin-Scan на 14 дней (или до 30 заявок и 50 подборов), подключение к вашему сайту, загрузку вашего прайс-листа в сервис и персонального менеджера на время теста.</p>
         </li>
         <li class="steps__item">
           <h3 class="steps__title">Что нужно от вас</h3>
-          <p class="steps__text">Доступ к вашему API, выгрузка ассортимента в любом удобном формате и обратная связь от менеджеров раз в неделю (15 минут).</p>
+          <p class="steps__text">Доступ к вашему аккаунту ABCP, чтобы бот видел каталог, цены и остатки, файл с ассортиментом в любом удобном формате и обратная связь от менеджеров раз в неделю (15 минут).</p>
         </li>
         <li class="steps__item">
           <h3 class="steps__title">Сколько это стоит</h3>
@@ -372,7 +323,7 @@ jsonld: |
         </li>
         <li class="steps__item">
           <h3 class="steps__title">Что после пробного периода</h3>
-          <p class="steps__text">Смотрим результаты: скорость ответа, число подборов, конверсию. Подходит — остаётесь на выбранном тарифе. Нет — сообщите нам до конца пробного периода, мы отключимся и удалим данные.</p>
+          <p class="steps__text">Смотрим результаты: качество подбора деталей, скорость ответа, число подборов, конверсию. Подходит — остаётесь на выбранном тарифе. Нет — сообщите нам до конца пробного периода, мы отключимся и удалим данные.</p>
         </li>
         <li class="steps__item">
           <h3 class="steps__title">Кому подходит</h3>
@@ -426,7 +377,7 @@ jsonld: |
     <section class="section" aria-labelledby="more-title">
       <div class="section__head">
         <span class="section__eyebrow">Читайте также</span>
-        <h2 class="section__title" id="more-title">Что почитать перед выбором</h2>
+        <h2 class="section__title" id="more-title">Разделы сайта</h2>
       </div>
       <ul class="chips chips--links">
         <li><a href="/how/">Как это работает</a></li>

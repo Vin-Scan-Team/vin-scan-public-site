@@ -77,6 +77,10 @@
 .compare-wrap + .compare-wrap,
 .compare-wrap + .split { margin-top: 2rem; }
 .compare tbody tr:last-child > * { border-bottom: 0; }
+.compare thead th:not(:first-child),
+.compare tbody td { text-align: center; }
+.compare .table__yes { color: var(--success); font-weight: 700; }
+.compare .table__no { color: var(--text-muted); }
 
 /* ===== Плашка-призыв в конце страницы ===== */
 .cta-band {

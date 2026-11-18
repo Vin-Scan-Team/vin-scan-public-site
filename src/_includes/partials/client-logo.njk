@@ -1,0 +1,24 @@
+{%- macro logo(client, lazy = true) -%}
+{%- if client.logo -%}
+<img src="{{ client.logo }}" alt="{{ client.name }}"{% if lazy %} loading="lazy"{% endif %} decoding="async">
+{%- else -%}
+<span class="client-logo-fallback">{{ client.name }}</span>
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro partner(client) -%}
+<li>
+  {%- if client.url %}
+  <a class="partner" href="{{ client.url }}" target="_blank" rel="noopener noreferrer">
+  {%- else %}
+  <div class="partner">
+  {%- endif %}
+    <span class="partner__logo">{{ logo(client) }}</span>
+    <span class="partner__city">{{ client.city or client.host }}</span>
+  {%- if client.url %}
+  </a>
+  {%- else %}
+  </div>
+  {%- endif %}
+</li>
+{%- endmacro -%}

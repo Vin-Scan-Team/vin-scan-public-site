@@ -1,6 +1,6 @@
-(() => {
-  const list = document.querySelector('.partners');
-  if (!list) return;
+document.querySelectorAll('.partners').forEach((list) => {
+  // Первый ряд едет влево, ряд с data-direction="right" вправо
+  const DIR = list.dataset.direction === 'right' ? -1 : 1;
 
   const SPEED = 40; // пикселей в секунду
   const mq = window.matchMedia('(min-width: 1181px)');
@@ -42,7 +42,7 @@
     speed += (targetSpeed() - speed) * Math.min(1, dt * 8);
     if (speed < 0.5 && paused()) speed = 0;
 
-    pos += speed * dt;
+    pos += DIR * speed * dt;
     list.scrollLeft = pos;
   }
 
@@ -64,7 +64,7 @@
       items.forEach((li) => {
         const c = li.cloneNode(true);
         c.setAttribute('aria-hidden', 'true');
-        c.querySelector('a').tabIndex = -1;
+        c.querySelectorAll('a').forEach((a) => { a.tabIndex = -1; });
         const img = c.querySelector('img');
         if (img) img.loading = 'eager';
         list.appendChild(c);
@@ -148,4 +148,4 @@
   });
 
   sync();
-})();
+});

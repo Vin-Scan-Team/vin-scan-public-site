@@ -1,0 +1,84 @@
+---
+layout: layouts/base.njk
+lastmod: "2026-11-18"
+title: "Наши клиенты: магазины и автосервисы с Vin-Scan"
+description: "Автомагазины и автосервисы на ABCP, которые подбирают запчасти по VIN и фото СТС с Vin-Scan. Логотипы, города, отзывы и ссылки на сайты."
+ogImageAlt: "Наши клиенты: магазины и автосервисы с Vin-Scan"
+cssFiles:
+  - base.css
+  - layout/header.css
+  - blocks/page.css
+  - blocks/blocks.css
+  - blocks/inner.css
+  - blocks/clients.css
+  - layout/footer.css
+  - components/cookie.css
+jsFiles:
+  - header
+  - consent
+  - metrika
+  - status
+---
+{% from "partials/client-logo.njk" import logo %}
+  <main class="page_main container" id="main">
+
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol>
+        <li><a href="/">Главная</a></li>
+        <li><span aria-current="page">Наши клиенты</span></li>
+      </ol>
+    </nav>
+
+    <section class="section page-hero" aria-labelledby="page-title">
+      <div class="page-hero__content">
+        <span class="section__eyebrow">Клиенты</span>
+        <h1 class="page-hero__title" id="page-title">Наши клиенты: магазины и автосервисы с Vin-Scan</h1>
+        <p class="page-hero__lead">
+          С Vin-Scan работают {{ clients.length }} магазинов автозапчастей и автосервисов на платформе ABCP.
+          Их клиенты отправляют фото СТС или VIN в чат на сайте и получают подбор за секунды.
+        </p>
+        <div class="page-hero__actions">
+          <a class="btn btn--primary" href="/contacts/">Стать клиентом</a>
+          <a class="btn btn--outline" href="/how/">Как это работает</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="clients-title">
+      <div class="section__head">
+        <span class="section__eyebrow">Кто с нами</span>
+        <h2 class="section__title" id="clients-title">Магазины и автосервисы с Vin-Scan</h2>
+      </div>
+
+      <ul class="clients-grid">
+      {%- for client in clients %}
+        <li class="client-card">
+          {%- if client.url %}
+          <a class="client-card__logo" href="{{ client.url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ client.name }}: сайт (откроется в новой вкладке)">{{ logo(client, loop.index > 8) }}</a>
+          {%- else %}
+          <span class="client-card__logo">{{ logo(client, loop.index > 8) }}</span>
+          {%- endif %}
+          <h3 class="client-card__name">{{ client.name }}</h3>
+          {%- if client.city %}
+          <p class="client-card__city">{{ client.city }}</p>
+          {%- endif %}
+          {%- if client.review %}
+          <blockquote class="client-card__review"><p>{{ client.review }}</p></blockquote>
+          {%- endif %}
+        </li>
+      {%- endfor %}
+      </ul>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="cta-band__text">
+        <h2 class="cta-band__title" id="cta-title">Подключите Vin-Scan к своему магазину</h2>
+        <p>Пробный период 14 дней бесплатно. Подключаем за 1 рабочий день.</p>
+      </div>
+      <div class="cta-band__actions">
+        <a class="btn btn--light" href="/contacts/">Попробовать бесплатно</a>
+        <a class="cta-band__link" href="/pricing/">Тарифы</a>
+      </div>
+    </section>
+
+  </main>

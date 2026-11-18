@@ -2,6 +2,8 @@
 .faq { display: flex; flex-direction: column; gap: 0.75rem; }
 .faq__item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); }
 .faq__item.is-open { border-color: var(--primary-border); box-shadow: var(--shadow); }
+.faq .faq-groups__title { margin: 1.25rem 0 0; }
+.faq .faq-groups__title:first-of-type { margin-top: 0; }
 
 /* Шестерёнка из логотипа поворачивается вместе с раскрытием */
 .faq__sprite { position: absolute; width: 0; height: 0; overflow: hidden; }

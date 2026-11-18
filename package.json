@@ -6,7 +6,8 @@
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "validate": "html-validate \"_site/**/*.html\""
+    "validate": "html-validate \"_site/**/*.html\"",
+    "add-client": "node scripts/add-client.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
