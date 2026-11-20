@@ -1,6 +1,7 @@
 [
   { "url": "/how/", "label": "Как это работает" },
   { "url": "/pricing/", "label": "Тарифы" },
+  { "url": "/promo/", "label": "Акция" },
   { "url": "/clients/", "label": "Клиенты" },
   { "url": "/faq/", "label": "Вопросы и ответы" },
   { "url": "/contacts/", "label": "Контакты" }
