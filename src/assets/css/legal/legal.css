@@ -310,28 +310,136 @@ footer {
 }
 
 /* Печать и экспорт в PDF */
+@page {
+  size: A4;
+  margin: 18mm 17mm 19mm;
+}
+
 @media print {
+  html,
   body {
-    padding: 0;
     background: var(--surface);
-    font-size: 11pt;
-    line-height: 1.5;
+  }
+
+  body {
+    display: block;
+    min-height: 0;
+    padding: 0;
+    font-family: Arial, "Helvetica Neue", sans-serif;
+    font-size: 10pt;
+    line-height: 1.45;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
-  html { background: var(--surface); }
-
   .container {
+    width: auto;
     max-width: none;
     padding: 0;
     border: 0;
     border-radius: 0;
     box-shadow: none;
+    overflow-wrap: break-word;
   }
 
   .back-link,
   .doc-actions { display: none; }
+
+  h1 {
+    margin: 0 0 0.35rem;
+    font-size: 22pt;
+    line-height: 1.15;
+    text-transform: none;
+  }
+
+  .doc-subtitle {
+    margin-bottom: 0.5rem;
+    font-size: 11pt;
+  }
+
+  .doc-date {
+    margin-bottom: 1rem;
+    padding-bottom: 0.55rem;
+  }
+
+  h2 {
+    margin-top: 1.35rem;
+    margin-bottom: 0.5rem;
+    font-size: 12pt;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+
+  h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+    font-size: 10.5pt;
+  }
+
+  p { margin-bottom: 0.65rem; }
+
+  ul,
+  ol { margin: 0 0 0.8rem 1.25rem; }
+
+  li { margin-bottom: 0.3rem; }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--border-strong);
+  }
+
+  .doc-toc {
+    margin: 1rem 0 1.25rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0;
+  }
+
+  .doc-toc__title { margin-bottom: 0.45rem; }
+
+  .doc-toc__list {
+    column-gap: 1.25rem;
+    font-size: 9pt;
+    line-height: 1.35;
+  }
+
+  .doc-toc__list li { margin-bottom: 0.25rem; }
+
+  .formula {
+    padding: 0.5rem 0.7rem;
+    border-radius: 0;
+  }
+
+  .details {
+    grid-template-columns: 10rem 1fr;
+    break-inside: avoid;
+  }
+
+  .details dt,
+  .details dd { padding: 0.4rem 0.65rem; }
+
+  .table-wrap {
+    overflow: visible;
+    border-radius: 0;
+  }
+
+  .table {
+    min-width: 0;
+    font-size: 8.5pt;
+    line-height: 1.3;
+  }
+
+  .table th,
+  .table td { padding: 0.45rem 0.5rem; }
+
+  .table thead { display: table-header-group; }
+  .table tr { break-inside: avoid; }
+
+  footer {
+    margin-top: 1.5rem;
+    padding-top: 0.75rem;
+    font-size: 8.5pt;
+  }
 
   p,
   li,
@@ -343,11 +451,6 @@ footer {
   .details,
   .formula,
   .doc-toc { break-inside: avoid; }
-
-  .table-wrap { overflow: visible; }
-  .table { min-width: 0; }
-  .table thead { display: table-header-group; }
-  .table tr { break-inside: avoid; }
 }
 
 @media (max-width: 640px) {
